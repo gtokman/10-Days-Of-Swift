@@ -8,6 +8,7 @@
 
 import UIKit
 import Cartography
+import FXBlurView
 
 
 class WeatherfulViewController: UIViewController {
@@ -17,13 +18,13 @@ class WeatherfulViewController: UIViewController {
     static var INSET: CGFloat { get { return 20 } }
     
     // MARK: UI Elements
-    
+    private let gradientView = UIView()
+    private let overlayView = UIImageView()
     private let backgroundView = UIImageView()
     private let scrollView = UIScrollView()
     private let currentWeatherView = CurrentWeatherView(frame: CGRectZero)
     private let hourlyForecastView = WeatherHourlyForecastView(frame: CGRectZero)
     private let daysForecastView = WeatherDaysForecastView(frame: CGRectZero)
-    private let gradientView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,17 +43,25 @@ class WeatherfulViewController: UIViewController {
 private extension WeatherfulViewController {
     
     func setup() {
+        
+        // Background image
         backgroundView.contentMode = .ScaleAspectFill
         backgroundView.clipsToBounds = true
+        view.addSubview(backgroundView)
         
+        // Image Blur
+        overlayView.contentMode = .ScaleAspectFill
+        overlayView.clipsToBounds = true
+        
+        view.addSubview(overlayView)
+        view.addSubview(gradientView)
+        
+        // Add Scroll view
         scrollView.showsVerticalScrollIndicator = false
-        scrollView.addSubview(currentWeatherView)
         scrollView.addSubview(currentWeatherView)
         scrollView.addSubview(hourlyForecastView)
         scrollView.addSubview(daysForecastView)
-        
-        view.addSubview(backgroundView)
-        view.addSubview(gradientView)
+        scrollView.delegate = self
         view.addSubview(scrollView)
     }
 }
@@ -63,6 +72,10 @@ extension WeatherfulViewController {
     
     func layoutView() {
         constrain(backgroundView) {
+            $0.edges == $0.superview!.edges
+        }
+        
+        constrain(overlayView) {
             $0.edges == $0.superview!.edges
         }
         
@@ -124,15 +137,28 @@ private extension WeatherfulViewController {
 
 private extension WeatherfulViewController {
     func render(image: UIImage?) {
-        if let image = image {
-            backgroundView.image = image
-        }
+        guard let image = image else { return }
+        backgroundView.image = image
+        overlayView.image = image.blurredImageWithRadius(10, iterations: 20, tintColor: UIColor.clearColor())
+        overlayView.alpha = 0
+        
     }
     
     func renderSubviews() {
         currentWeatherView.render()
         hourlyForecastView.render()
+        daysForecastView.render()
     }
 }
 
+// MARK: UIScrollViewDelegate
+
+extension WeatherfulViewController: UIScrollViewDelegate {
+    
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        let offset = scrollView.contentOffset.y
+        let treshold: CGFloat = CGFloat(view.frame.height)/2
+        overlayView.alpha = min (1.0, offset/treshold)
+    }
+}
 
