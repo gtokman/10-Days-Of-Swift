@@ -23,6 +23,7 @@ class WeatherfulViewController: UIViewController {
     private let currentWeatherView = CurrentWeatherView(frame: CGRectZero)
     private let hourlyForecastView = WeatherHourlyForecastView(frame: CGRectZero)
     private let daysForecastView = WeatherDaysForecastView(frame: CGRectZero)
+    private let gradientView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,7 @@ class WeatherfulViewController: UIViewController {
         layoutView()
         style()
         render(UIImage(named: "loading"))
+        renderSubviews()
         
     }
 }
@@ -50,6 +52,7 @@ private extension WeatherfulViewController {
         scrollView.addSubview(daysForecastView)
         
         view.addSubview(backgroundView)
+        view.addSubview(gradientView)
         view.addSubview(scrollView)
     }
 }
@@ -65,6 +68,10 @@ extension WeatherfulViewController {
         
         constrain(scrollView) {
             $0.edges == $0.superview!.edges
+        }
+        
+        constrain(gradientView) {
+            $0.edges ==  $0.superview!.edges
         }
         
         constrain(currentWeatherView) {
@@ -95,18 +102,36 @@ extension WeatherfulViewController {
 }
 
 // MARK: Style
+
 private extension WeatherfulViewController {
     func style() {
+        gradientView.backgroundColor = UIColor(white: 0, alpha: 0.7)
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame = gradientView.bounds
         
+        let blackColor = UIColor(white: 0, alpha: 0.0)
+        let clearColor = UIColor(white: 0, alpha: 1.0)
+        
+        gradientLayer.colors = [blackColor.CGColor, clearColor.CGColor]
+        
+        gradientLayer.startPoint = CGPointMake(1.0, 0.5)
+        gradientLayer.endPoint = CGPointMake(1.0, 1.0)
+        gradientView.layer.mask = gradientLayer
     }
 }
 
 // MARK: Render
+
 private extension WeatherfulViewController {
     func render(image: UIImage?) {
         if let image = image {
             backgroundView.image = image
         }
+    }
+    
+    func renderSubviews() {
+        currentWeatherView.render()
+        hourlyForecastView.render()
     }
 }
 
