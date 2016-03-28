@@ -1,0 +1,32 @@
+# Uncomment this line to define a global platform for your project
+ platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+ use_frameworks!
+ inhibit_all_warnings!
+
+target 'Project-1-Weatherful' do
+    
+    # Library to set auto layout in code	
+    pod 'Cartography', :git => "https://github.com/robb/Cartography.git", :tag => '0.6.0'
+
+    # Make network requests
+    pod 'Alamofire', '~> 3.0’
+
+    # Read JSON
+    pod 'SwiftyJSON', '~> 2.3.0'
+
+    # Weather icons	
+    pod 'WeatherIconsKit', :git => 'git@github.com:gscalzo/WeatherIconsKit.git'
+
+    # Get Flickr images
+    pod 'FlickrKit', '~> 1.0.5'
+
+    # Blur image views
+    pod 'FXBlurView', '~> 1.6.4'
+
+    # Custom font
+    pod 'LatoFont', :git => "https://github.com/gscalzo/LatoFont.git"
+
+
+end
+
