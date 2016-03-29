@@ -81,12 +81,22 @@ private extension WeatherHourForecastView{
 
 // MARK: Render
 extension WeatherHourForecastView {
-    func render() {
+    func render(weatherCondition: WeatherCondition) {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "hh:mm"
-        hourLabel.text = dateFormatter.stringFromDate(NSDate())
-        iconLabel.attributedText = WIKFontIcon.wiDaySunnyIconWithSize(30).attributedString()
+        hourLabel.text = dateFormatter.stringFromDate(weatherCondition.time)
+        iconLabel.attributedText = iconStringFromIcon(weatherCondition.icon!, size: 30)
         
-        tempsLabel.text = "30º 50º"
+        var usesMetric = false
+        if let localeSystem =  NSLocale.currentLocale().objectForKey( NSLocaleUsesMetricSystem) as? Bool {
+            usesMetric = localeSystem
+        }
+        
+        if usesMetric {
+            tempsLabel.text = "\(weatherCondition.minTempCelsius.roundToInt())º  \(weatherCondition.maxTempCelsius.roundToInt())º"
+        } else {
+            tempsLabel.text = "\(weatherCondition.minTempFahrenheit.roundToInt())º  \(weatherCondition.maxTempFahrenheit.roundToInt())º"
+        }
+        
     }
 }

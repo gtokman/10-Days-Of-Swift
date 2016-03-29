@@ -90,20 +90,23 @@ private extension WeatherDayForecastView{
 // MARK: Render
 
 extension WeatherDayForecastView {
-    func render() {
+    func render(weatherCondition: WeatherCondition) {
         let dateFormatter = NSDateFormatter()
         dateFormatter.dateFormat = "EEEE"
-        dayLabel.text = dateFormatter.stringFromDate(NSDate())
-        iconLabel.attributedText = WIKFontIcon.wiDaySunnyIconWithSize(30).attributedString()
+        dayLabel.text = dateFormatter.stringFromDate(weatherCondition.time)
+        iconLabel.attributedText = iconStringFromIcon(weatherCondition.icon!, size: 30)
         
-        tempsLabel.text = "30º      50º"
+        var usesMetric = false
+        
+        if let localeSystem =  NSLocale.currentLocale().objectForKey(NSLocaleUsesMetricSystem) as? Bool {
+           usesMetric = localeSystem
+        }
+        
+        if usesMetric {
+           tempsLabel.text = "\(weatherCondition.minTempCelsius.roundToInt())º      \(weatherCondition.maxTempCelsius.roundToInt())º"
+        } else {
+            tempsLabel.text = "\(weatherCondition.minTempFahrenheit.roundToInt())º  \(weatherCondition.maxTempFahrenheit.roundToInt())º"
+        }
+        
     }
 }
-
-
-
-
-
-
-
-

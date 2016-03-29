@@ -139,13 +139,29 @@ private extension CurrentWeatherView{
 // MARK: Render
 
 extension CurrentWeatherView {
-    func render() {
-        iconLabel.attributedText = WIKFontIcon.wiDaySunnyIconWithSize(20).attributedString()
-        weatherLabel.text = "Sunny"
-        minTempLabel.text = "30º"
-        maxTempLabel.text = "50º"
-        currentTempLabel.text = "42º"
-        cityLabel.text = "Orlando"
+    func render(weatherCondition: WeatherCondition) {
+      
+        iconLabel.attributedText = iconStringFromIcon(weatherCondition.icon!, size: 20)
+        weatherLabel.text = weatherCondition.weather
+        
+        var userMetric = false
+        
+        if let localeSystem =  NSLocale.currentLocale().objectForKey(NSLocaleUsesMetricSystem) as? Bool {
+            userMetric = localeSystem
+        }
+        
+        if userMetric {
+            minTempLabel.text = "\(weatherCondition.minTempCelsius.roundToInt())º"
+            maxTempLabel.text = "\(weatherCondition.maxTempCelsius.roundToInt())º"
+            currentTempLabel.text = "\(weatherCondition.tempCelsius.roundToInt())º"
+        } else {
+            minTempLabel.text = "\(weatherCondition.minTempFahrenheit.roundToInt())º"
+            maxTempLabel.text = "\(weatherCondition.maxTempFahrenheit.roundToInt())º"
+            currentTempLabel.text = "\(weatherCondition.tempFahrenheit.roundToInt())º"
+        }
+        
+        cityLabel.text = weatherCondition.cityName ?? ""
+        
     }
 }
 

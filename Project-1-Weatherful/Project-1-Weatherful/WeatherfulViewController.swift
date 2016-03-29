@@ -37,7 +37,24 @@ class WeatherfulViewController: UIViewController {
             FlickrDatastore().retrieveImageAtLat(location.lat, lon: location.lon) { image in
                 
                 self?.render(image)
-                
+            }
+            
+            let weatherDatastore = WeatherDatastore()
+            
+            weatherDatastore.retrieveCurrentWeatherAtLat(location.lat, lon: location.lon) {
+                currentWeatherConditions in
+                self?.renderCurrent(currentWeatherConditions)
+                return
+            }
+            weatherDatastore.retrieveHourlyForecastAtLat(location.lat, lon: location.lon) {
+                hourlyWeatherConditions in
+                self?.renderHourly(hourlyWeatherConditions)
+                return
+            }
+            weatherDatastore.retrieveDailyForecastAtLat(location.lat, lon: location.lon, dayCount: 7) {
+                hourlyWeatherConditions in
+                self?.renderDaily(hourlyWeatherConditions)
+                return
             }
         }
     }
@@ -49,7 +66,6 @@ class WeatherfulViewController: UIViewController {
         layoutView()
         style()
         render(UIImage(named: "loading"))
-        renderSubviews()
         
     }
 }
@@ -160,11 +176,18 @@ private extension WeatherfulViewController {
         
     }
     
-    func renderSubviews() {
-        currentWeatherView.render()
-        hourlyForecastView.render()
-        daysForecastView.render()
+    func renderCurrent(currentWeatherConditions: WeatherCondition){
+        currentWeatherView.render(currentWeatherConditions)
     }
+    
+    func renderHourly(weatherConditions: [WeatherCondition]){
+        hourlyForecastView.render(weatherConditions)
+    }
+    
+    func renderDaily(weatherConditions: [WeatherCondition]){
+        daysForecastView.render(weatherConditions)
+    }
+    
 }
 
 // MARK: UIScrollViewDelegate

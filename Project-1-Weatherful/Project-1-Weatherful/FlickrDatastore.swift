@@ -31,14 +31,14 @@ class FlickrDatastore {
         
         if let response = response as? [String: AnyObject],
             photos = response["photos"] as? [String: AnyObject],
-        listOfPhotos = photos["photo"] as? [[String: AnyObject]]
+            listOfPhotos = photos["photo"] as? [[String: AnyObject]]
             where listOfPhotos.count > 0 {
-           // print(listOfPhotos)
+            // print(listOfPhotos)
             
             // Get random photo
             let randomIndex = Int(arc4random_uniform(UInt32(listOfPhotos.count)))
             
-            let photo = listOfPhotos[randomIndex] 
+            let photo = listOfPhotos[randomIndex]
             let url = fk.photoURLForSize(FKPhotoSizeMedium640, fromPhotoDictionary: photo)
             let image = UIImage(data: NSData(contentsOfURL: url)!)
             
