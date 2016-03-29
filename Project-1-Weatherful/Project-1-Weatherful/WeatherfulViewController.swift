@@ -26,6 +26,22 @@ class WeatherfulViewController: UIViewController {
     private let hourlyForecastView = WeatherHourlyForecastView(frame: CGRectZero)
     private let daysForecastView = WeatherDaysForecastView(frame: CGRectZero)
     
+    // MARK: View Life Cycle
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        let lat: Double = 48.8567
+        let lon: Double = 2.3508
+        
+        FlickrDatastore().retrieveImageAtLat(lat, lon: lon) { image in
+            
+            self.render(image)
+            
+        }
+    
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

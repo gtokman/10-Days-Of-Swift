@@ -16,6 +16,7 @@
 		02B041AB1CA9913B003D7BD8 /* WeatherHourlyForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B041AA1CA9913B003D7BD8 /* WeatherHourlyForecastView.swift */; };
 		02B041AD1CA9B3E2003D7BD8 /* WeatherHourForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B041AC1CA9B3E2003D7BD8 /* WeatherHourForecastView.swift */; };
 		02B041AF1CA9D0AE003D7BD8 /* WeatherDayForecastView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B041AE1CA9D0AE003D7BD8 /* WeatherDayForecastView.swift */; };
+		02B041B11CA9EDD1003D7BD8 /* FlickrDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B041B01CA9EDD1003D7BD8 /* FlickrDatastore.swift */; };
 		CB4539AC5FC6ADE38629B787 /* Pods_Project_1_Weatherful.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9534A50CB7A5CD44D16EEFFC /* Pods_Project_1_Weatherful.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		02B041AA1CA9913B003D7BD8 /* WeatherHourlyForecastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHourlyForecastView.swift; sourceTree = "<group>"; };
 		02B041AC1CA9B3E2003D7BD8 /* WeatherHourForecastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherHourForecastView.swift; sourceTree = "<group>"; };
 		02B041AE1CA9D0AE003D7BD8 /* WeatherDayForecastView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherDayForecastView.swift; sourceTree = "<group>"; };
+		02B041B01CA9EDD1003D7BD8 /* FlickrDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlickrDatastore.swift; sourceTree = "<group>"; };
 		9534A50CB7A5CD44D16EEFFC /* Pods_Project_1_Weatherful.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_1_Weatherful.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD4A7EE4A80713D04A04EDE3 /* Pods-Project-1-Weatherful.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-1-Weatherful.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project-1-Weatherful/Pods-Project-1-Weatherful.release.xcconfig"; sourceTree = "<group>"; };
 		B0F36D75560502877B25B6BD /* Pods-Project-1-Weatherful.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-1-Weatherful.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project-1-Weatherful/Pods-Project-1-Weatherful.debug.xcconfig"; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		02B041A21CA986F8003D7BD8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				02B041B01CA9EDD1003D7BD8 /* FlickrDatastore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -255,6 +258,7 @@
 			files = (
 				02B041AB1CA9913B003D7BD8 /* WeatherHourlyForecastView.swift in Sources */,
 				02B041A71CA98E80003D7BD8 /* CurrentWeatherView.swift in Sources */,
+				02B041B11CA9EDD1003D7BD8 /* FlickrDatastore.swift in Sources */,
 				02B041AF1CA9D0AE003D7BD8 /* WeatherDayForecastView.swift in Sources */,
 				02B0418F1CA97F31003D7BD8 /* AppDelegate.swift in Sources */,
 				02B041A51CA98722003D7BD8 /* WeatherfulViewController.swift in Sources */,
