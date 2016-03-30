@@ -1,0 +1,25 @@
+# Uncomment this line to define a global platform for your project
+ platform :ios, '8.0'
+# Uncomment this line if you're using Swift
+ use_frameworks!
+ inhibit_all_warnings!
+
+target 'Project-2-ThriftShop' do
+
+    # Read Json	
+    pod 'SwiftyJSON', '~> 2.3.0'
+
+    # Load images from web
+    pod 'SDWebImage', '~> 3.7.3'
+
+    # Icons
+    pod 'FontAwesomeKit', :git => 'https://github.com/gscalzo/FontAwesomeKit'
+    
+    # Nav bar button
+    pod 'BBBadgeBarButtonItem', '~> 1.2'
+
+    # Font
+    pod 'LatoFont', :git => "https://github.com/gscalzo/LatoFont.git"
+
+end
+
