@@ -23,6 +23,9 @@
 		022924C21CAC799300F43291 /* ProductStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924C11CAC799300F43291 /* ProductStore.swift */; };
 		022924C41CAC7E2600F43291 /* LocalProductGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924C31CAC7E2600F43291 /* LocalProductGateway.swift */; };
 		022924C61CAC7F6500F43291 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 022924C51CAC7F6500F43291 /* products.json */; };
+		022924C81CAC85B000F43291 /* CartGateWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924C71CAC85B000F43291 /* CartGateWay.swift */; };
+		022924CA1CAC867B00F43291 /* LocalCartGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924C91CAC867B00F43291 /* LocalCartGateway.swift */; };
+		022924CC1CAC86CE00F43291 /* CartStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924CB1CAC86CE00F43291 /* CartStore.swift */; };
 		90F4C775FA9D4FFE176B672C /* Pods_Project_2_ThriftShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2D40BD2F81958CAD4464D9 /* Pods_Project_2_ThriftShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		022924C11CAC799300F43291 /* ProductStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductStore.swift; sourceTree = "<group>"; };
 		022924C31CAC7E2600F43291 /* LocalProductGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalProductGateway.swift; sourceTree = "<group>"; };
 		022924C51CAC7F6500F43291 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
+		022924C71CAC85B000F43291 /* CartGateWay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartGateWay.swift; sourceTree = "<group>"; };
+		022924C91CAC867B00F43291 /* LocalCartGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCartGateway.swift; sourceTree = "<group>"; };
+		022924CB1CAC86CE00F43291 /* CartStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartStore.swift; sourceTree = "<group>"; };
 		2A2D40BD2F81958CAD4464D9 /* Pods_Project_2_ThriftShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_2_ThriftShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC3855E64CB193388BA2E63 /* Pods-Project-2-ThriftShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-2-ThriftShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project-2-ThriftShop/Pods-Project-2-ThriftShop.release.xcconfig"; sourceTree = "<group>"; };
 		E0ADF6FBB6463BAF90813279 /* Pods-Project-2-ThriftShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-2-ThriftShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project-2-ThriftShop/Pods-Project-2-ThriftShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +127,7 @@
 				022924B11CAC361800F43291 /* UserStore.swift */,
 				022924BC1CAC784400F43291 /* Product.swift */,
 				022924C11CAC799300F43291 /* ProductStore.swift */,
+				022924CB1CAC86CE00F43291 /* CartStore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -141,6 +148,8 @@
 			children = (
 				022924BF1CAC78B100F43291 /* ProductGateway.swift */,
 				022924C31CAC7E2600F43291 /* LocalProductGateway.swift */,
+				022924C71CAC85B000F43291 /* CartGateWay.swift */,
+				022924C91CAC867B00F43291 /* LocalCartGateway.swift */,
 			);
 			name = Gateway;
 			sourceTree = "<group>";
@@ -290,12 +299,15 @@
 				022924BD1CAC784400F43291 /* Product.swift in Sources */,
 				022924971CAC250700F43291 /* AppDelegate.swift in Sources */,
 				022924BB1CAC5A3900F43291 /* TwoColumnFlowLayout.swift in Sources */,
+				022924C81CAC85B000F43291 /* CartGateWay.swift in Sources */,
 				022924C41CAC7E2600F43291 /* LocalProductGateway.swift in Sources */,
 				022924AA1CAC27B900F43291 /* RegisterViewController.swift in Sources */,
 				022924C21CAC799300F43291 /* ProductStore.swift in Sources */,
 				022924B21CAC361800F43291 /* UserStore.swift in Sources */,
+				022924CC1CAC86CE00F43291 /* CartStore.swift in Sources */,
 				022924C01CAC78B100F43291 /* ProductGateway.swift in Sources */,
 				022924B91CAC560700F43291 /* ProductCollectionViewCell.swift in Sources */,
+				022924CA1CAC867B00F43291 /* LocalCartGateway.swift in Sources */,
 				022924AF1CAC34E900F43291 /* TypeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
