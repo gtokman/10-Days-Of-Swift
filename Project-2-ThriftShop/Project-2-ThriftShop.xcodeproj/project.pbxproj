@@ -16,6 +16,13 @@
 		022924B21CAC361800F43291 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924B11CAC361800F43291 /* UserStore.swift */; };
 		022924B51CAC388700F43291 /* EcommerceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924B41CAC388700F43291 /* EcommerceViewController.swift */; };
 		022924B71CAC389500F43291 /* Ecommerce.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022924B61CAC389500F43291 /* Ecommerce.storyboard */; };
+		022924B91CAC560700F43291 /* ProductCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924B81CAC560700F43291 /* ProductCollectionViewCell.swift */; };
+		022924BB1CAC5A3900F43291 /* TwoColumnFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924BA1CAC5A3900F43291 /* TwoColumnFlowLayout.swift */; };
+		022924BD1CAC784400F43291 /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924BC1CAC784400F43291 /* Product.swift */; };
+		022924C01CAC78B100F43291 /* ProductGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924BF1CAC78B100F43291 /* ProductGateway.swift */; };
+		022924C21CAC799300F43291 /* ProductStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924C11CAC799300F43291 /* ProductStore.swift */; };
+		022924C41CAC7E2600F43291 /* LocalProductGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924C31CAC7E2600F43291 /* LocalProductGateway.swift */; };
+		022924C61CAC7F6500F43291 /* products.json in Resources */ = {isa = PBXBuildFile; fileRef = 022924C51CAC7F6500F43291 /* products.json */; };
 		90F4C775FA9D4FFE176B672C /* Pods_Project_2_ThriftShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2D40BD2F81958CAD4464D9 /* Pods_Project_2_ThriftShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +38,13 @@
 		022924B11CAC361800F43291 /* UserStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		022924B41CAC388700F43291 /* EcommerceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EcommerceViewController.swift; sourceTree = "<group>"; };
 		022924B61CAC389500F43291 /* Ecommerce.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Ecommerce.storyboard; sourceTree = "<group>"; };
+		022924B81CAC560700F43291 /* ProductCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductCollectionViewCell.swift; sourceTree = "<group>"; };
+		022924BA1CAC5A3900F43291 /* TwoColumnFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TwoColumnFlowLayout.swift; sourceTree = "<group>"; };
+		022924BC1CAC784400F43291 /* Product.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		022924BF1CAC78B100F43291 /* ProductGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductGateway.swift; sourceTree = "<group>"; };
+		022924C11CAC799300F43291 /* ProductStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProductStore.swift; sourceTree = "<group>"; };
+		022924C31CAC7E2600F43291 /* LocalProductGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalProductGateway.swift; sourceTree = "<group>"; };
+		022924C51CAC7F6500F43291 /* products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = products.json; sourceTree = "<group>"; };
 		2A2D40BD2F81958CAD4464D9 /* Pods_Project_2_ThriftShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_2_ThriftShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC3855E64CB193388BA2E63 /* Pods-Project-2-ThriftShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-2-ThriftShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project-2-ThriftShop/Pods-Project-2-ThriftShop.release.xcconfig"; sourceTree = "<group>"; };
 		E0ADF6FBB6463BAF90813279 /* Pods-Project-2-ThriftShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-2-ThriftShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project-2-ThriftShop/Pods-Project-2-ThriftShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -70,6 +84,7 @@
 		022924951CAC250700F43291 /* Project-2-ThriftShop */ = {
 			isa = PBXGroup;
 			children = (
+				022924BE1CAC789E00F43291 /* Gateway */,
 				022924B01CAC35C800F43291 /* Model */,
 				022924B31CAC386C00F43291 /* Ecommerce */,
 				022924A81CAC279E00F43291 /* Register */,
@@ -90,6 +105,7 @@
 		022924AD1CAC2CEF00F43291 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
+				022924C51CAC7F6500F43291 /* products.json */,
 				022924961CAC250700F43291 /* AppDelegate.swift */,
 				0229249D1CAC250700F43291 /* Assets.xcassets */,
 				0229249F1CAC250700F43291 /* LaunchScreen.storyboard */,
@@ -103,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				022924B11CAC361800F43291 /* UserStore.swift */,
+				022924BC1CAC784400F43291 /* Product.swift */,
+				022924C11CAC799300F43291 /* ProductStore.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -112,8 +130,19 @@
 			children = (
 				022924B41CAC388700F43291 /* EcommerceViewController.swift */,
 				022924B61CAC389500F43291 /* Ecommerce.storyboard */,
+				022924B81CAC560700F43291 /* ProductCollectionViewCell.swift */,
+				022924BA1CAC5A3900F43291 /* TwoColumnFlowLayout.swift */,
 			);
 			name = Ecommerce;
+			sourceTree = "<group>";
+		};
+		022924BE1CAC789E00F43291 /* Gateway */ = {
+			isa = PBXGroup;
+			children = (
+				022924BF1CAC78B100F43291 /* ProductGateway.swift */,
+				022924C31CAC7E2600F43291 /* LocalProductGateway.swift */,
+			);
+			name = Gateway;
 			sourceTree = "<group>";
 		};
 		36351396452089779FC96169 /* Frameworks */ = {
@@ -194,6 +223,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				022924C61CAC7F6500F43291 /* products.json in Resources */,
 				022924A11CAC250700F43291 /* LaunchScreen.storyboard in Resources */,
 				0229249E1CAC250700F43291 /* Assets.xcassets in Resources */,
 				022924AC1CAC27E000F43291 /* Register.storyboard in Resources */,
@@ -257,9 +287,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				022924B51CAC388700F43291 /* EcommerceViewController.swift in Sources */,
+				022924BD1CAC784400F43291 /* Product.swift in Sources */,
 				022924971CAC250700F43291 /* AppDelegate.swift in Sources */,
+				022924BB1CAC5A3900F43291 /* TwoColumnFlowLayout.swift in Sources */,
+				022924C41CAC7E2600F43291 /* LocalProductGateway.swift in Sources */,
 				022924AA1CAC27B900F43291 /* RegisterViewController.swift in Sources */,
+				022924C21CAC799300F43291 /* ProductStore.swift in Sources */,
 				022924B21CAC361800F43291 /* UserStore.swift in Sources */,
+				022924C01CAC78B100F43291 /* ProductGateway.swift in Sources */,
+				022924B91CAC560700F43291 /* ProductCollectionViewCell.swift in Sources */,
 				022924AF1CAC34E900F43291 /* TypeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
