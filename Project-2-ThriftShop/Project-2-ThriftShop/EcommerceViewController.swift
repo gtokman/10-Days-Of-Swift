@@ -29,6 +29,12 @@ class EcommerceViewController: UICollectionViewController {
     
     // MARK: View Life Cycle
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        refreshCartCount()
+        collectionView?.reloadData()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -103,7 +109,7 @@ extension EcommerceViewController {
     }
     
     func cartButtonTapped(sender: UIButton) {
-        print("showCheckoutScene()")
+        showCheckoutScene()
     }
     
     func refreshCartCount() {
@@ -116,8 +122,29 @@ extension EcommerceViewController {
     
 }
 
+// MARK: Segue
 
+extension EcommerceViewController: SegueHandlerType {
+    enum SegueIdentifier: String {
+        case ShowCheckoutScene = "ShowCheckoutScene"
+    }
+    
+    func showCheckoutScene() {
+        performSegueWithIdentifier(.ShowCheckoutScene , sender: self)
+    }
+}
 
+extension EcommerceViewController {
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        switch segueIdentifierForSegue(segue) {
+        case .ShowCheckoutScene:
+            guard let checkViewController = segue.destinationViewController as? CheckoutViewController else {
+                return
+            }
+            checkViewController.cartStore = cartStore
+        }
+    }
+}
 
 
 

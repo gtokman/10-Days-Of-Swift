@@ -99,10 +99,21 @@
                         </connections>
                     </collectionView>
                     <navigationItem key="navigationItem" id="RdD-cI-aVb"/>
+                    <connections>
+                        <segue destination="ZUG-Zf-qNj" kind="show" identifier="ShowCheckoutScene" id="Idn-8L-Exj"/>
+                    </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="v6X-sd-bOP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1993" y="491"/>
+        </scene>
+        <!--Checkout-->
+        <scene sceneID="riY-el-h0O">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Checkout" id="ZUG-Zf-qNj" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4n2-cG-I3d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2532.5" y="491"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nki-AY-21S">

@@ -26,6 +26,8 @@
 		022924C81CAC85B000F43291 /* CartGateWay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924C71CAC85B000F43291 /* CartGateWay.swift */; };
 		022924CA1CAC867B00F43291 /* LocalCartGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924C91CAC867B00F43291 /* LocalCartGateway.swift */; };
 		022924CC1CAC86CE00F43291 /* CartStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924CB1CAC86CE00F43291 /* CartStore.swift */; };
+		022924CF1CAC8EF500F43291 /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 022924CE1CAC8EF500F43291 /* CheckoutViewController.swift */; };
+		022924D11CAC8F0800F43291 /* Checkout.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 022924D01CAC8F0800F43291 /* Checkout.storyboard */; };
 		90F4C775FA9D4FFE176B672C /* Pods_Project_2_ThriftShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A2D40BD2F81958CAD4464D9 /* Pods_Project_2_ThriftShop.framework */; };
 /* End PBXBuildFile section */
 
@@ -51,6 +53,8 @@
 		022924C71CAC85B000F43291 /* CartGateWay.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartGateWay.swift; sourceTree = "<group>"; };
 		022924C91CAC867B00F43291 /* LocalCartGateway.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalCartGateway.swift; sourceTree = "<group>"; };
 		022924CB1CAC86CE00F43291 /* CartStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CartStore.swift; sourceTree = "<group>"; };
+		022924CE1CAC8EF500F43291 /* CheckoutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		022924D01CAC8F0800F43291 /* Checkout.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Checkout.storyboard; sourceTree = "<group>"; };
 		2A2D40BD2F81958CAD4464D9 /* Pods_Project_2_ThriftShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_2_ThriftShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		4BC3855E64CB193388BA2E63 /* Pods-Project-2-ThriftShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-2-ThriftShop.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project-2-ThriftShop/Pods-Project-2-ThriftShop.release.xcconfig"; sourceTree = "<group>"; };
 		E0ADF6FBB6463BAF90813279 /* Pods-Project-2-ThriftShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-2-ThriftShop.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project-2-ThriftShop/Pods-Project-2-ThriftShop.debug.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +94,7 @@
 		022924951CAC250700F43291 /* Project-2-ThriftShop */ = {
 			isa = PBXGroup;
 			children = (
+				022924CD1CAC8EC700F43291 /* Checkout */,
 				022924BE1CAC789E00F43291 /* Gateway */,
 				022924B01CAC35C800F43291 /* Model */,
 				022924B31CAC386C00F43291 /* Ecommerce */,
@@ -152,6 +157,15 @@
 				022924C91CAC867B00F43291 /* LocalCartGateway.swift */,
 			);
 			name = Gateway;
+			sourceTree = "<group>";
+		};
+		022924CD1CAC8EC700F43291 /* Checkout */ = {
+			isa = PBXGroup;
+			children = (
+				022924CE1CAC8EF500F43291 /* CheckoutViewController.swift */,
+				022924D01CAC8F0800F43291 /* Checkout.storyboard */,
+			);
+			name = Checkout;
 			sourceTree = "<group>";
 		};
 		36351396452089779FC96169 /* Frameworks */ = {
@@ -236,6 +250,7 @@
 				022924A11CAC250700F43291 /* LaunchScreen.storyboard in Resources */,
 				0229249E1CAC250700F43291 /* Assets.xcassets in Resources */,
 				022924AC1CAC27E000F43291 /* Register.storyboard in Resources */,
+				022924D11CAC8F0800F43291 /* Checkout.storyboard in Resources */,
 				022924B71CAC389500F43291 /* Ecommerce.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -308,6 +323,7 @@
 				022924C01CAC78B100F43291 /* ProductGateway.swift in Sources */,
 				022924B91CAC560700F43291 /* ProductCollectionViewCell.swift in Sources */,
 				022924CA1CAC867B00F43291 /* LocalCartGateway.swift in Sources */,
+				022924CF1CAC8EF500F43291 /* CheckoutViewController.swift in Sources */,
 				022924AF1CAC34E900F43291 /* TypeExtensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
