@@ -26,7 +26,7 @@
 ![SnapHat](http://g.recordit.co/xb7mNqacj0.gif)
 ### I learned how to: 
 * Enable image picker and camera
-* Enable add objects to photos
-* Post photo to Facebook
+* Add objects to photos
+* Post photos to Facebook
 * Tools/Libraries used: UIImagePickerControllerDelegate, Social Framework
 
