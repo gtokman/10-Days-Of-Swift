@@ -20,3 +20,13 @@
 * Pass data using protocol and delegate
 * Customize collection view
 * *Tools/Libraries used: Xcode 7.3, [SwiftyJson](https://github.com/SwiftyJSON/SwiftyJSON), [BBBadgeBarButtonItem](https://github.com/TanguyAladenise/BBBadgeBarButtonItem), [FontAwesomeKit](https://github.com/PrideChung/FontAwesomeKit), [SDWebImage](https://github.com/rs/SDWebImage)*
+
+## Day 3 - Photo Share
+
+![SnapHat](http://g.recordit.co/xb7mNqacj0.gif)
+### I learned how to: 
+* Enable image picker and camera
+* Enable add objects to photos
+* Post photo to Facebook
+* Tools/Libraries used: UIImagePickerControllerDelegate, Social Framework
+
