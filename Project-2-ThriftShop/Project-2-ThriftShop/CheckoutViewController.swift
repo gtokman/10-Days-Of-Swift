@@ -46,7 +46,7 @@ class CheckoutViewController: UIViewController {
     @IBAction func buyTapped(sender: UIButton) {
         cartStore.buy()
         
-        let alert = UIAlertController(title: "Done", message: "Thank you for buying as Thirft Shop", preferredStyle: .Alert)
+        let alert = UIAlertController(title: "Done", message: "Thank you for buying at the Thirft Shop", preferredStyle: .Alert)
         let action = UIAlertAction(title: "OK", style: .Default) { _ in
             self.navigationController?.popToRootViewControllerAnimated(false)
         }

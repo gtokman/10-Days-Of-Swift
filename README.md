@@ -11,3 +11,12 @@
 * Networking
 * *Tools/Libraries used: Xcode 7.3, Alamofire, SwiftyJson, Cartography, FlickrKit, WeatherIconsKit CoreLocation*
 
+## Day - 2 - Thrift Store
+
+![Thirft](http://g.recordit.co/mRmP1DWwq3.gif)
+### I learned how to: 
+* Layout UI Elements in a stack view
+* Use Story references
+* Pass data using protocol and delegate
+* Customize collection view
+* *Tools/Libraries used: Xcode 7.3, SwiftyJson, BBBBadgeBarButtonIem, FontAwesomeKit, SDWebImage
