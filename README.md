@@ -9,7 +9,7 @@
 * Add constraints in code
 * Get user location
 * Networking
-* *Tools/Libraries used: Xcode 7.3, Alamofire, SwiftyJson, Cartography, FlickrKit, WeatherIconsKit CoreLocation*
+* *Tools/Libraries used: Xcode 7.3, [Alamofire](https://github.com/Alamofire/Alamofire), [SwiftyJson](https://github.com/SwiftyJSON/SwiftyJSON), [Cartography](https://github.com/robb/Cartography), [FlickrKit](https://github.com/devedup/FlickrKit), [WeatherIconsKit](https://github.com/gscalzo/WeatherIconsKit), CoreLocation*
 
 ## Day - 2 - Thrift Store
 
@@ -19,4 +19,4 @@
 * Use Story references
 * Pass data using protocol and delegate
 * Customize collection view
-* *Tools/Libraries used: Xcode 7.3, SwiftyJson, BBBBadgeBarButtonIem, FontAwesomeKit, SDWebImage
+* *Tools/Libraries used: Xcode 7.3, [SwiftyJson](https://github.com/SwiftyJSON/SwiftyJSON), [BBBadgeBarButtonItem](https://github.com/TanguyAladenise/BBBadgeBarButtonItem), [FontAwesomeKit](https://github.com/PrideChung/FontAwesomeKit), [SDWebImage](https://github.com/rs/SDWebImage)*
