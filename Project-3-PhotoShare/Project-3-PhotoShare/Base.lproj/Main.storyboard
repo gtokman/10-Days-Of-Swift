@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
@@ -100,6 +101,117 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+        </scene>
+        <!--Edit Pictute View Controller-->
+        <scene sceneID="lLd-EW-CEz">
+            <objects>
+                <viewController storyboardIdentifier="EditPhoto" id="Ixb-3E-lXV" customClass="EditPictuteViewController" customModule="Project_3_PhotoShare" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YEP-Uy-vBl"/>
+                        <viewControllerLayoutGuide type="bottom" id="qWx-FT-NHz"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="hWG-UB-2oe">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jkL-PI-6XN">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="25" translatesAutoresizingMaskIntoConstraints="NO" id="zPt-5s-TFt">
+                                        <rect key="frame" x="125" y="0.0" width="350" height="60"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JPY-fH-VRA">
+                                                <rect key="frame" x="0.0" y="0.0" width="100" height="60"/>
+                                                <color key="backgroundColor" red="0.74117647060000003" green="0.37647058820000001" blue="0.3803921569" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="100" id="MA8-hd-rZv"/>
+                                                    <constraint firstAttribute="height" constant="60" id="zkA-9M-eVw"/>
+                                                </constraints>
+                                                <state key="normal" title="Text">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addText:" destination="Ixb-3E-lXV" eventType="touchUpInside" id="fgS-SU-KWK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v0f-7h-Mm2">
+                                                <rect key="frame" x="125" y="0.0" width="100" height="60"/>
+                                                <color key="backgroundColor" red="0.99607843139999996" green="0.93333333330000001" blue="0.49019607840000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Hat">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addHat:" destination="Ixb-3E-lXV" eventType="touchUpInside" id="nnT-Je-NWb"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fw1-W9-4K1">
+                                                <rect key="frame" x="250" y="0.0" width="100" height="60"/>
+                                                <color key="backgroundColor" red="0.93725490199999995" green="0.32156862749999998" blue="0.52156862749999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <state key="normal" title="Circle">
+                                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="addCircle:" destination="Ixb-3E-lXV" eventType="touchUpInside" id="qbN-hO-xQz"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="fw1-W9-4K1" firstAttribute="width" secondItem="JPY-fH-VRA" secondAttribute="width" id="UAB-BH-FQA"/>
+                                            <constraint firstItem="v0f-7h-Mm2" firstAttribute="width" secondItem="JPY-fH-VRA" secondAttribute="width" id="ZSA-Em-Pk8"/>
+                                        </constraints>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SFt-FB-2Iv" customClass="BoardView" customModule="Project_3_PhotoShare" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="60" width="600" height="460"/>
+                                        <color key="backgroundColor" red="0.90823972225189209" green="0.92638683319091797" blue="0.9317171573638916" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="SFt-FB-2Iv" secondAttribute="height" multiplier="1:1" id="MQd-Fu-jzW"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="MQd-Fu-jzW"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FEK-mP-zxO">
+                                        <rect key="frame" x="0.0" y="520" width="600" height="60"/>
+                                        <color key="backgroundColor" red="0.2274509804" green="0.5568627451" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="60" id="VLb-cN-EQz"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="Facebook it">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="facebookButton:" destination="Ixb-3E-lXV" eventType="touchUpInside" id="pEm-fb-IxY"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="SFt-FB-2Iv" firstAttribute="leading" secondItem="jkL-PI-6XN" secondAttribute="leading" id="6yT-0d-5Wa"/>
+                                    <constraint firstAttribute="trailing" secondItem="SFt-FB-2Iv" secondAttribute="trailing" id="Aqf-2N-ibl"/>
+                                    <constraint firstAttribute="trailing" secondItem="FEK-mP-zxO" secondAttribute="trailing" id="ToJ-l5-MXz"/>
+                                    <constraint firstItem="FEK-mP-zxO" firstAttribute="leading" secondItem="jkL-PI-6XN" secondAttribute="leading" id="Tqg-Em-8YK"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="jkL-PI-6XN" firstAttribute="leading" secondItem="hWG-UB-2oe" secondAttribute="leading" id="AXd-t9-fVW"/>
+                            <constraint firstItem="qWx-FT-NHz" firstAttribute="top" secondItem="jkL-PI-6XN" secondAttribute="bottom" id="BRX-Ty-dye"/>
+                            <constraint firstItem="jkL-PI-6XN" firstAttribute="top" secondItem="YEP-Uy-vBl" secondAttribute="bottom" id="IFc-C5-I74"/>
+                            <constraint firstAttribute="trailing" secondItem="jkL-PI-6XN" secondAttribute="trailing" id="akx-Vm-XCD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="boardView" destination="SFt-FB-2Iv" id="CPx-0L-QhO"/>
+                        <segue destination="8cF-sw-9Yr" kind="unwind" identifier="Restart" unwindAction="unwindSegue:" id="Al1-79-EhV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FS3-39-8s7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="8cF-sw-9Yr" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1225" y="429"/>
         </scene>
     </scenes>
 </document>

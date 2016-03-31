@@ -13,6 +13,7 @@
 		02E684291CAD754C00A96005 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02E684281CAD754C00A96005 /* Assets.xcassets */; };
 		02E6842C1CAD754C00A96005 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02E6842A1CAD754C00A96005 /* LaunchScreen.storyboard */; };
 		02E684341CAD7CA300A96005 /* BoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E684331CAD7CA300A96005 /* BoardView.swift */; };
+		02E684381CAD88A300A96005 /* EditPictuteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E684371CAD88A300A96005 /* EditPictuteViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		02E6842B1CAD754C00A96005 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02E6842D1CAD754C00A96005 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02E684331CAD7CA300A96005 /* BoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoardView.swift; sourceTree = "<group>"; };
+		02E684371CAD88A300A96005 /* EditPictuteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EditPictuteViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				02E6842A1CAD754C00A96005 /* LaunchScreen.storyboard */,
 				02E6842D1CAD754C00A96005 /* Info.plist */,
 				02E684331CAD7CA300A96005 /* BoardView.swift */,
+				02E684371CAD88A300A96005 /* EditPictuteViewController.swift */,
 			);
 			path = "Project-3-PhotoShare";
 			sourceTree = "<group>";
@@ -139,6 +142,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02E684341CAD7CA300A96005 /* BoardView.swift in Sources */,
+				02E684381CAD88A300A96005 /* EditPictuteViewController.swift in Sources */,
 				02E684241CAD754C00A96005 /* InitialViewController.swift in Sources */,
 				02E684221CAD754C00A96005 /* AppDelegate.swift in Sources */,
 			);

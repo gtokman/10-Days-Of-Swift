@@ -49,72 +49,82 @@ class BoardView: UIView {
             fatalError("The function \(#function) shouldn't be called from the base class")
         }
         
+    }
+    
+    class ElementBackground: BoardView.Element {
+        var image: UIImage
+        init(image: UIImage) {
+            self.image = image
+            super.init()
+            self.position = CGPointZero
+        }
         
+        override func draw() {
+            if let position = self.position {
+                image.drawAtPoint(position)
+            }
+        }
+    }
+    
+    class ElementPicture: BoardView.Element {
+        var image: UIImage
         
-        class ElementBackground: BoardView.Element {
-            var image: UIImage
-            init(image: UIImage) {
-                self.image = image
-                super.init()
-                self.position = CGPointZero
+        init(image: UIImage) {
+            self.image = image
+            super.init()
+        }
+        
+        override func draw() {
+            if let position = self.position {
+                let newPosition = CGPointMake(position.x - image.size.width / 2, position.y - image.size.height / 2)
+                image.drawAtPoint(newPosition)
+            }
+        }
+    }
+    
+    class ElementText: BoardView.Element {
+        var text: String
+        var attributes: [String: AnyObject]
+        
+        init(text: String, attributes: [String: AnyObject]) {
+            self.text = text
+            self.attributes = attributes
+            super.init()
+        }
+        
+        override func draw() {
+            if let position = self.position {
+                text.drawAtPoint(position, withAttributes: attributes)
+            }
+        }
+    }
+    
+    class Elementcircle: BoardView.Element {
+        var initialPoint: CGPoint?
+        
+        override var position: CGPoint? {
+            get {
+                return super.position
             }
             
-            override func draw() {
-                if let position = self.position {
-                    image.drawAtPoint(position)
+            set {
+                if initialPoint == nil {
+                    initialPoint = newValue
                 }
+                super.position = newValue
             }
         }
         
-        class ElementPicture: BoardView.Element {
-            var image: UIImage
-            
-            init(image: UIImage) {
-                self.image = image
-                super.init()
+        override func draw() {
+            if let initialPosition = self.initialPoint, position = self.position {
+                let borderRect = CGRectMake(initialPosition.x, initialPosition.y, position.x - initialPosition.y, position.y - initialPosition.y)
+                let context = UIGraphicsGetCurrentContext()
+                CGContextSetRGBStrokeColor(context, 1.0, 1.0, 1.0, 1.0)
+                CGContextSetRGBFillColor(context, 0.0, 1.0, 0.0, 1.0)
+                CGContextSetLineWidth(context, 2.0)
+                CGContextFillEllipseInRect (context, borderRect)
+                CGContextStrokeEllipseInRect(context, borderRect)
             }
-            
-            override func draw() {
-                if let position = self.position {
-                    let newPosition = CGPointMake(position.x - image.size.width / 2, position.y - image.size.height / 2)
-                    image.drawAtPoint(newPosition)
-                }
-            }
-        }
-        
-        class ElementText: BoardView.Element {
-            var text: String
-            var attributes: [String: AnyObject]
-            
-            init(text: String, attributes: [String: AnyObject]) {
-                self.text = text
-                self.attributes = attributes
-                super.init()
-            }
-            
-            override func draw() {
-                if let position = self.position {
-                    text.drawAtPoint(position, withAttributes: attributes)
-                }
-            }
-            
-            class Elementcircle: BoardView.Element {
-                var initialPoint: CGPoint?
-                
-                override var position: CGPoint? {
-                    get {
-                        return super.position
-                    }
-                    
-                    set {
-                        if initialPoint == nil {
-                            initialPoint = newValue
-                        }
-                        super.position = newValue
-                    }
-                }
-            }
-            
         }
     }
 }

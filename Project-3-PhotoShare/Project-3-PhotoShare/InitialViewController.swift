@@ -65,7 +65,7 @@ extension InitialViewController: UIImagePickerControllerDelegate {
         imagePicker.dismissViewControllerAnimated(true) {
             let image = info[UIImagePickerControllerOriginalImage] as! UIImage
             
-            let editPictureViewController = self.storyboard?.instantiateViewControllerWithIdentifier("EditPhoto") as! EditPictureViewController
+            let editPictureViewController = self.storyboard?.instantiateViewControllerWithIdentifier("EditPhoto") as! EditPictuteViewController
             editPictureViewController.photo = image
             self.presentViewController(editPictureViewController, animated: true, completion: nil)
         }
