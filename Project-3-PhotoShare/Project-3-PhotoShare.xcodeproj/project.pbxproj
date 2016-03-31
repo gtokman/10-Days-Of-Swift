@@ -39,6 +39,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0262E4011CADA8A700C08D86 /* Contollers */ = {
+			isa = PBXGroup;
+			children = (
+				02E684231CAD754C00A96005 /* InitialViewController.swift */,
+				02E684371CAD88A300A96005 /* EditPictuteViewController.swift */,
+			);
+			name = Contollers;
+			sourceTree = "<group>";
+		};
+		0262E4021CADA8B200C08D86 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02E684331CAD7CA300A96005 /* BoardView.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0262E4031CADA8B900C08D86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02E684251CAD754C00A96005 /* Main.storyboard */,
+				02E6842A1CAD754C00A96005 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		0262E4041CADA8C000C08D86 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				02E684211CAD754C00A96005 /* AppDelegate.swift */,
+				02E684281CAD754C00A96005 /* Assets.xcassets */,
+				02E6842D1CAD754C00A96005 /* Info.plist */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
 		02E684151CAD754C00A96005 = {
 			isa = PBXGroup;
 			children = (
@@ -58,14 +94,10 @@
 		02E684201CAD754C00A96005 /* Project-3-PhotoShare */ = {
 			isa = PBXGroup;
 			children = (
-				02E684211CAD754C00A96005 /* AppDelegate.swift */,
-				02E684231CAD754C00A96005 /* InitialViewController.swift */,
-				02E684251CAD754C00A96005 /* Main.storyboard */,
-				02E684281CAD754C00A96005 /* Assets.xcassets */,
-				02E6842A1CAD754C00A96005 /* LaunchScreen.storyboard */,
-				02E6842D1CAD754C00A96005 /* Info.plist */,
-				02E684331CAD7CA300A96005 /* BoardView.swift */,
-				02E684371CAD88A300A96005 /* EditPictuteViewController.swift */,
+				0262E4041CADA8C000C08D86 /* Supporting */,
+				0262E4021CADA8B200C08D86 /* Model */,
+				0262E4031CADA8B900C08D86 /* View */,
+				0262E4011CADA8A700C08D86 /* Contollers */,
 			);
 			path = "Project-3-PhotoShare";
 			sourceTree = "<group>";
@@ -296,6 +328,7 @@
 				02E684321CAD754C00A96005 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
