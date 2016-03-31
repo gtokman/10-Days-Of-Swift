@@ -13,27 +13,32 @@ class InitialViewController: UIViewController {
     // MARK: Properties
     
     var imagePicker = UIImagePickerController()
-
+    
+    // MARK: View Life Cycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        
         imagePicker.delegate = self
         imagePicker.allowsEditing = false
     }
-
-   // MARK: Actions
+    
+    // MARK: Actions
     
     @IBAction func choosePhotoButton(sender: UIButton) {
-        setupCamera()
+        setupPicker()
     }
     
     @IBAction func takePhotoButton(sender: UIButton) {
+        setupCamera()
     }
-
-
+    
+    
 }
 
-extension InitialViewController: UIImagePickerControllerDelegate {
+// MARK: Setup
+
+extension InitialViewController {
     
     func setupCamera() {
         // Crashes if you switch the order
@@ -47,11 +52,51 @@ extension InitialViewController: UIImagePickerControllerDelegate {
     }
     
     func setupPicker() {
-        
+        imagePicker.sourceType = .PhotoLibrary
+        self.presentViewController(imagePicker, animated: true, completion: nil)
     }
     
 }
 
+// MARK: Image Picker  Controller Delegate
+
+extension InitialViewController: UIImagePickerControllerDelegate {
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        imagePicker.dismissViewControllerAnimated(true) {
+            let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+            
+            let editPictureViewController = self.storyboard?.instantiateViewControllerWithIdentifier("EditPhoto") as! EditPictureViewController
+            editPictureViewController.photo = image
+            self.presentViewController(editPictureViewController, animated: true, completion: nil)
+        }
+    }
+    
+    // Cancel
+    func imagePickerControllerDidCancel(picker: UIImagePickerController) {
+        imagePicker.dismissViewControllerAnimated(true) {
+            print("User cancel taking photo")
+        }
+    }
+}
+
+// MARK: Navigation Controller Delegate
+
 extension InitialViewController: UINavigationControllerDelegate {
     
 }
+
+// MARK: Unwind
+extension InitialViewController {
+    @IBAction func unwindSegue(segue: UIStoryboardSegue) {
+        
+    }
+}
+
+
+
+
+
+
+
+
+
