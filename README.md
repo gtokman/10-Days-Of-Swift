@@ -3,7 +3,7 @@
 *Challenging myself to learn new frameworks, API's, and libraries in Swift.*
 
 ## Day - 1 - Weatherful
-![Weatherful](http://g.recordit.co/K0HQEc6ezz.gif)
+![Weatherful](http://g.recordit.co/sNe7ss0iSc.gif)
 ### I learned how to: 
 * Create UI elements in code
 * Add constraints in code
