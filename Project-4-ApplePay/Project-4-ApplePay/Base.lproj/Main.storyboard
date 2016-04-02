@@ -1,13 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_4_ApplePay" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -15,11 +18,104 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="uHn-uK-dHV">
+                                <rect key="frame" x="0.0" y="20" width="600" height="580"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter the order amount" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S6k-W8-J3e">
+                                        <rect key="frame" x="147" y="0.0" width="306" height="25"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="178" id="Acm-ch-BzA"/>
+                                            <constraint firstAttribute="width" constant="306" id="JxN-h2-v83"/>
+                                            <constraint firstAttribute="height" constant="25" id="uGF-cl-yRl"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="Acm-ch-BzA"/>
+                                            </mask>
+                                        </variation>
+                                    </label>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Amount" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iYx-fT-Vtn">
+                                        <rect key="frame" x="250" y="45" width="100" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="100" id="DZX-xI-yat"/>
+                                            <constraint firstAttribute="height" constant="30" id="U5x-6f-cZb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5iR-r1-Joa">
+                                        <rect key="frame" x="260" y="95" width="80" height="35"/>
+                                        <color key="backgroundColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="35" id="gVb-y6-oca"/>
+                                            <constraint firstAttribute="width" constant="80" id="zb6-tl-pYQ"/>
+                                        </constraints>
+                                        <state key="normal" title="Pay">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="payWithApplePay:" destination="BYZ-38-t0r" eventType="touchUpInside" id="kp5-EC-6Fc"/>
+                                        </connections>
+                                    </button>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="vQM-NU-yKZ">
+                                        <rect key="frame" x="20" y="150" width="560" height="430"/>
+                                        <color key="backgroundColor" red="0.78823529410000004" green="0.83921568629999999" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" secondItem="vQM-NU-yKZ" secondAttribute="height" multiplier="1:1" id="NXY-BN-FdQ"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="NXY-BN-FdQ"/>
+                                            </mask>
+                                        </variation>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="vQM-NU-yKZ" firstAttribute="top" secondItem="5iR-r1-Joa" secondAttribute="bottom" constant="20" id="aoS-AQ-Sqh"/>
+                                    <constraint firstAttribute="bottom" secondItem="vQM-NU-yKZ" secondAttribute="bottom" constant="20" id="d8U-iD-jr9"/>
+                                    <constraint firstAttribute="bottom" secondItem="vQM-NU-yKZ" secondAttribute="bottom" constant="20" id="gBT-zE-amH"/>
+                                    <constraint firstAttribute="trailing" secondItem="vQM-NU-yKZ" secondAttribute="trailing" constant="20" id="hsu-cM-p28"/>
+                                    <constraint firstAttribute="bottom" secondItem="vQM-NU-yKZ" secondAttribute="bottom" id="mfa-Pl-WR2"/>
+                                    <constraint firstItem="vQM-NU-yKZ" firstAttribute="leading" secondItem="uHn-uK-dHV" secondAttribute="leading" constant="20" id="n1z-1t-S3M"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="vQM-NU-yKZ" secondAttribute="bottom" constant="20" id="sFE-OZ-3LZ"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="d8U-iD-jr9"/>
+                                        <exclude reference="gBT-zE-amH"/>
+                                        <exclude reference="sFE-OZ-3LZ"/>
+                                    </mask>
+                                </variation>
+                            </stackView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uHn-uK-dHV" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="0Ea-hI-Vwa"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="uHn-uK-dHV" secondAttribute="bottom" id="FMB-sf-20B"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="uHn-uK-dHV" secondAttribute="bottom" id="HaM-jG-dlH"/>
+                            <constraint firstAttribute="trailing" secondItem="uHn-uK-dHV" secondAttribute="trailing" id="nLG-rr-lVV"/>
+                            <constraint firstItem="uHn-uK-dHV" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="xSZ-Kk-fca"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="HaM-jG-dlH"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="paymentValueField" destination="iYx-fT-Vtn" id="tCU-QC-yf4"/>
+                        <outlet property="textArea" destination="vQM-NU-yKZ" id="LrP-9L-mNV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="699" y="429"/>
         </scene>
     </scenes>
 </document>
