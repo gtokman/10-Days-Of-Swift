@@ -65,15 +65,10 @@
 		0262E4101CAF637E00C08D86 /* Project-4-ApplePay */ = {
 			isa = PBXGroup;
 			children = (
+				0262E42A1CAF7DC700C08D86 /* View */,
+				0262E4281CAF7D8F00C08D86 /* Controller */,
 				0262E4251CAF6CEE00C08D86 /* Logger */,
-				0262E4231CAF63A100C08D86 /* Project-4-ApplePay.entitlements */,
-				0262E4111CAF637E00C08D86 /* AppDelegate.swift */,
-				0262E4131CAF637E00C08D86 /* ViewController.swift */,
-				0262E4151CAF637E00C08D86 /* Main.storyboard */,
-				0262E4181CAF637E00C08D86 /* Assets.xcassets */,
-				0262E41A1CAF637E00C08D86 /* LaunchScreen.storyboard */,
-				0262E41D1CAF637E00C08D86 /* Info.plist */,
-				0262E4241CAF682800C08D86 /* bridge.h */,
+				0262E4291CAF7DA300C08D86 /* Supporting */,
 			);
 			path = "Project-4-ApplePay";
 			sourceTree = "<group>";
@@ -81,9 +76,38 @@
 		0262E4251CAF6CEE00C08D86 /* Logger */ = {
 			isa = PBXGroup;
 			children = (
+				0262E4111CAF637E00C08D86 /* AppDelegate.swift */,
 				0262E4261CAF6D0300C08D86 /* UILogger.swift */,
 			);
 			name = Logger;
+			sourceTree = "<group>";
+		};
+		0262E4281CAF7D8F00C08D86 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				0262E4131CAF637E00C08D86 /* ViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0262E4291CAF7DA300C08D86 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				0262E4231CAF63A100C08D86 /* Project-4-ApplePay.entitlements */,
+				0262E4181CAF637E00C08D86 /* Assets.xcassets */,
+				0262E41A1CAF637E00C08D86 /* LaunchScreen.storyboard */,
+				0262E41D1CAF637E00C08D86 /* Info.plist */,
+				0262E4241CAF682800C08D86 /* bridge.h */,
+			);
+			name = Supporting;
+			sourceTree = "<group>";
+		};
+		0262E42A1CAF7DC700C08D86 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				0262E4151CAF637E00C08D86 /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		7572BCEC276C3873C2D68EFC /* Pods */ = {

@@ -6,6 +6,11 @@
 //  Copyright © 2016 garytokman. All rights reserved.
 //
 
+/*
+ To charge the card, you have to build a server-side application that takes the generated payment token and submits a charge request to Stripe.
+Every payment processor has a decent amount of sample code available along with server-side SDKs that simplify your development. For Stripe, the tutorials for charging a card are located at https://stripe.com/docs/tutorials/charges.
+ */
+
 import UIKit
 import PassKit
 import Stripe
