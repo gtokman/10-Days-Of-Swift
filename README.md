@@ -21,7 +21,7 @@
 * Customize collection view
 * *Tools/Libraries used: Xcode 7.3, [SwiftyJson](https://github.com/SwiftyJSON/SwiftyJSON), [BBBadgeBarButtonItem](https://github.com/TanguyAladenise/BBBadgeBarButtonItem), [FontAwesomeKit](https://github.com/PrideChung/FontAwesomeKit), [SDWebImage](https://github.com/rs/SDWebImage)*
 
-## Day 3 - Photo Share
+## Day - 3 - Photo Share
 
 ![SnapHat](http://g.recordit.co/xb7mNqacj0.gif)
 ### I learned how to: 
@@ -30,3 +30,12 @@
 * Post photos to Facebook
 * Tools/Libraries used: UIImagePickerControllerDelegate, Social Framework
 
+## Day - 4 - Apple Pay
+
+![Swift Shop](http://g.recordit.co/29klC00Okc.gif)
+### I learned how to: 
+* Sign up for Apple Pay Merchant ID
+* Use Stripe SDK
+* Display Apple Pay UI
+* Process a simulated payment
+* Tools/Libraries used: Xcode 7.3, [Stripe](https://github.com/stripe/stripe-ios), PassKit
