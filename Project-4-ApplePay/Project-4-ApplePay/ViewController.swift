@@ -16,7 +16,7 @@ import PassKit
 import Stripe
 
 class ViewController: UIViewController {
-    
+
     // MARK: Properties
     
     let SupportedPaymentNetworks = [PKPaymentNetworkVisa, PKPaymentNetworkMasterCard, PKPaymentNetworkAmex]
