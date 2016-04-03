@@ -53,7 +53,7 @@
                     </tableView>
                     <navigationItem key="navigationItem" title="Touch ID" id="Ma1-r3-iGd"/>
                     <connections>
-                        <outlet property="textView" destination="Awp-Jr-eq6" id="qFK-wc-t1Z"/>
+                        <outlet property="textView" destination="Li4-v5-f4D" id="HIq-md-HR9"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wUy-df-Tf0" userLabel="First Responder" sceneMemberID="firstResponder"/>
