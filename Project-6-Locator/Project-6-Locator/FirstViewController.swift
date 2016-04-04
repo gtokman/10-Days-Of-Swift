@@ -15,7 +15,7 @@ class FirstViewController: UITableViewController {
     
     var locationManager = CLLocationManager()
     var currentLocation = CLLocation()
-
+    
     // MARK: Life Cycle
     
     override func viewDidAppear(animated: Bool) {
@@ -27,22 +27,24 @@ class FirstViewController: UITableViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
-
-
+    
+    
     // MARK: Actions
-
+    
     @IBAction func addLocationButton(sender: UIBarButtonItem) {
-        
+        addLocation()
     }
 }
 
+// MARK: Setup
+
 extension FirstViewController {
     func askLocationPermission() {
-        locationManager.delegate = self
+//        locationManager.delegate = self
         locationManager.desiredAccuracy = kCLLocationAccuracyNearestTenMeters
         
         switch (CLLocationManager.authorizationStatus()) {
-       
+            
         case .AuthorizedWhenInUse, .AuthorizedAlways:
             locationManager.stopUpdatingLocation()
         case .Denied:
@@ -54,5 +56,67 @@ extension FirstViewController {
             fallthrough
         default:
             locationManager.requestWhenInUseAuthorization()
+        }
+    }
+    
+    func addLocation() {
+        var location: CLLocation
+        
+        if (CLLocationManager.authorizationStatus() != .AuthorizedWhenInUse) {
+            location = CLLocation(latitude: 32.830579, longitude: -117.153839)
+        } else {
+            location = locationManager.location!
+        }
+        
+        DataManager.sharedInstance.locations.insert(location, atIndex: 0)
+        
+        tableView.reloadData()
     }
 }
+
+
+// MARK: Table View Data Source
+
+extension FirstViewController {
+    
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return DataManager.sharedInstance.locations.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("LocationCell", forIndexPath: indexPath)
+        
+        cell.tag = indexPath.row
+        
+        let entry: CLLocation = DataManager.sharedInstance.locations[indexPath.row]
+        let dateFormatter = NSDateFormatter()
+        dateFormatter.dateFormat = "hh:mm:ss, MM-dd-yyyy"
+        
+        cell.textLabel?.text = "\(entry.coordinate.latitude), \(entry.coordinate.longitude) "
+        cell.detailTextLabel?.text = dateFormatter.stringFromDate(entry.timestamp)
+        
+        return cell
+    }
+    
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
