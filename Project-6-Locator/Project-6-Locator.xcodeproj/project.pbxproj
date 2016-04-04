@@ -63,6 +63,7 @@
 		02C1D0EA1CB1FEAA00562CE2 /* Project-6-Locator */ = {
 			isa = PBXGroup;
 			children = (
+				02C1D1041CB2069E00562CE2 /* Model */,
 				02C1D0EB1CB1FEAA00562CE2 /* AppDelegate.swift */,
 				02C1D0ED1CB1FEAA00562CE2 /* FirstViewController.swift */,
 				02C1D0EF1CB1FEAA00562CE2 /* SecondViewController.swift */,
@@ -81,6 +82,13 @@
 				02C1D0FF1CB1FEB700562CE2 /* CoreLocation.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		02C1D1041CB2069E00562CE2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
