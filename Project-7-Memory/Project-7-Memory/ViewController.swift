@@ -20,18 +20,18 @@ class ViewController: UIViewController {
 
 private extension ViewController {
     func setup() {
-        view.backgroundColor = .whiteColor()
+        view.backgroundColor = .greenSea()
         
         // Add buttons
-        buildButtonWithCenter(CGPoint(x: view.center.x, y: view.center.y / 2.0), title: "Easy", color: .greenColor(), action: #selector(ViewController.onEasyTapped(_:)))
-        buildButtonWithCenter(CGPoint(x: view.center.x, y: view.center.y), title: "Meduim", color: .yellowColor(), action: #selector(ViewController.onMediumTapped(_:)))
-        buildButtonWithCenter(CGPoint(x: view.center.x, y: view.center.y  * 3.0 / 2.0), title: "Hard", color: .redColor(), action: #selector(ViewController.onHardTapped(_:)))
+        buildButtonWithCenter(CGPoint(x: view.center.x, y: view.center.y / 2.0), title: "Easy", color: .emerald(), action: #selector(ViewController.onEasyTapped(_:)))
+        buildButtonWithCenter(CGPoint(x: view.center.x, y: view.center.y), title: "Meduim", color: .sunflower(), action: #selector(ViewController.onMediumTapped(_:)))
+        buildButtonWithCenter(CGPoint(x: view.center.x, y: view.center.y  * 3.0 / 2.0), title: "Hard", color: .alizarin(), action: #selector(ViewController.onHardTapped(_:)))
     }
     
     func buildButtonWithCenter(center: CGPoint, title: String, color: UIColor, action: Selector) {
         let button = UIButton()
         button.setTitle(title, forState: .Normal)
-        button.setTitleColor(.blackColor(), forState: .Normal)
+        button.setTitleColor(.whiteColor(), forState: .Normal)
         
         button.frame = CGRect(origin: CGPoint(x: 0, y:  0), size: CGSize(width: 200, height: 50))
         button.center = center
@@ -59,14 +59,8 @@ extension ViewController {
     }
     
     func newGameDifficulty(difficulty: Difficulty) {
-        
-        switch difficulty {
-        case .Easy:
-            print("Easy")
-        case .Medium:
-            print("Medium")
-        case .Hard:
-            print("Hard")
-        }
+     
+        let gameViewController = MemoryViewController(difficulty: difficulty)
+        presentViewController(gameViewController, animated: true, completion: nil)
     }
 }

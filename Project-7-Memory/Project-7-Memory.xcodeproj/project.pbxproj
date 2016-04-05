@@ -15,6 +15,8 @@
 		02B361CF1CB35DCD002565F5 /* Project_7_MemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361CE1CB35DCD002565F5 /* Project_7_MemoryTests.swift */; };
 		02B361DA1CB35DCD002565F5 /* Project_7_MemoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361D91CB35DCD002565F5 /* Project_7_MemoryUITests.swift */; };
 		02B361E81CB35EF0002565F5 /* GameDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361E71CB35EF0002565F5 /* GameDifficulty.swift */; };
+		02B361EA1CB3F247002565F5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361E91CB3F247002565F5 /* ColorExtension.swift */; };
+		02B361EF1CB3F596002565F5 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361EE1CB3F596002565F5 /* MemoryViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,8 @@
 		02B361D91CB35DCD002565F5 /* Project_7_MemoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_7_MemoryUITests.swift; sourceTree = "<group>"; };
 		02B361DB1CB35DCD002565F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02B361E71CB35EF0002565F5 /* GameDifficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDifficulty.swift; sourceTree = "<group>"; };
+		02B361E91CB3F247002565F5 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		02B361EE1CB3F596002565F5 /* MemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,13 +103,14 @@
 		02B361B81CB35DCD002565F5 /* Project-7-Memory */ = {
 			isa = PBXGroup;
 			children = (
+				02B361ED1CB3F57B002565F5 /* Model */,
+				02B361EC1CB3F574002565F5 /* Views */,
+				02B361EB1CB3F56D002565F5 /* Controllers */,
 				02B361B91CB35DCD002565F5 /* AppDelegate.swift */,
-				02B361BB1CB35DCD002565F5 /* ViewController.swift */,
-				02B361BD1CB35DCD002565F5 /* Main.storyboard */,
 				02B361C01CB35DCD002565F5 /* Assets.xcassets */,
-				02B361C21CB35DCD002565F5 /* LaunchScreen.storyboard */,
 				02B361C51CB35DCD002565F5 /* Info.plist */,
 				02B361E71CB35EF0002565F5 /* GameDifficulty.swift */,
+				02B361E91CB3F247002565F5 /* ColorExtension.swift */,
 			);
 			path = "Project-7-Memory";
 			sourceTree = "<group>";
@@ -126,6 +131,31 @@
 				02B361DB1CB35DCD002565F5 /* Info.plist */,
 			);
 			path = "Project-7-MemoryUITests";
+			sourceTree = "<group>";
+		};
+		02B361EB1CB3F56D002565F5 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				02B361BB1CB35DCD002565F5 /* ViewController.swift */,
+				02B361EE1CB3F596002565F5 /* MemoryViewController.swift */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		02B361EC1CB3F574002565F5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				02B361BD1CB35DCD002565F5 /* Main.storyboard */,
+				02B361C21CB35DCD002565F5 /* LaunchScreen.storyboard */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		02B361ED1CB3F57B002565F5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -262,6 +292,8 @@
 				02B361BC1CB35DCD002565F5 /* ViewController.swift in Sources */,
 				02B361E81CB35EF0002565F5 /* GameDifficulty.swift in Sources */,
 				02B361BA1CB35DCD002565F5 /* AppDelegate.swift in Sources */,
+				02B361EA1CB3F247002565F5 /* ColorExtension.swift in Sources */,
+				02B361EF1CB3F596002565F5 /* MemoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
