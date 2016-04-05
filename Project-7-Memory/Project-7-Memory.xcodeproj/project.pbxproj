@@ -18,6 +18,7 @@
 		02B361F11CB40AA3002565F5 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361F01CB40AA3002565F5 /* Deck.swift */; };
 		02B361F31CB418D4002565F5 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361F21CB418D4002565F5 /* CardCell.swift */; };
 		02B361F51CB4254A002565F5 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361F41CB4254A002565F5 /* ViewControllerExtension.swift */; };
+		02B361F91CB42939002565F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B361F81CB42939002565F5 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +56,7 @@
 		02B361F01CB40AA3002565F5 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		02B361F21CB418D4002565F5 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 		02B361F41CB4254A002565F5 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
+		02B361F81CB42939002565F5 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +107,7 @@
 		02B361B81CB35DCD002565F5 /* Project-7-Memory */ = {
 			isa = PBXGroup;
 			children = (
+				02B361F71CB4292D002565F5 /* View */,
 				02B361F61CB42573002565F5 /* Supporting */,
 				02B361ED1CB3F57B002565F5 /* Model */,
 				02B361EB1CB3F56D002565F5 /* Controllers */,
@@ -159,6 +162,14 @@
 				02B361F41CB4254A002565F5 /* ViewControllerExtension.swift */,
 			);
 			name = Supporting;
+			sourceTree = "<group>";
+		};
+		02B361F71CB4292D002565F5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02B361F81CB42939002565F5 /* Main.storyboard */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -266,6 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02B361C11CB35DCD002565F5 /* Assets.xcassets in Resources */,
+				02B361F91CB42939002565F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
