@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "02B361931CB352A3002565F5"
-               BuildableName = "Project-7-3DTouch.app"
-               BlueprintName = "Project-7-3DTouch"
-               ReferencedContainer = "container:Project-7-3DTouch.xcodeproj">
+               BlueprintIdentifier = "02B361B51CB35DCD002565F5"
+               BuildableName = "Project-7-Memory.app"
+               BlueprintName = "Project-7-Memory"
+               ReferencedContainer = "container:Project-7-Memory.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -28,14 +28,34 @@
       selectedLauncherIdentifier = "Xcode.DebuggerFoundation.Launcher.LLDB"
       shouldUseLaunchSchemeArgsEnv = "YES">
       <Testables>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "02B361C91CB35DCD002565F5"
+               BuildableName = "Project-7-MemoryTests.xctest"
+               BlueprintName = "Project-7-MemoryTests"
+               ReferencedContainer = "container:Project-7-Memory.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "02B361D41CB35DCD002565F5"
+               BuildableName = "Project-7-MemoryUITests.xctest"
+               BlueprintName = "Project-7-MemoryUITests"
+               ReferencedContainer = "container:Project-7-Memory.xcodeproj">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "02B361931CB352A3002565F5"
-            BuildableName = "Project-7-3DTouch.app"
-            BlueprintName = "Project-7-3DTouch"
-            ReferencedContainer = "container:Project-7-3DTouch.xcodeproj">
+            BlueprintIdentifier = "02B361B51CB35DCD002565F5"
+            BuildableName = "Project-7-Memory.app"
+            BlueprintName = "Project-7-Memory"
+            ReferencedContainer = "container:Project-7-Memory.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +75,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "02B361931CB352A3002565F5"
-            BuildableName = "Project-7-3DTouch.app"
-            BlueprintName = "Project-7-3DTouch"
-            ReferencedContainer = "container:Project-7-3DTouch.xcodeproj">
+            BlueprintIdentifier = "02B361B51CB35DCD002565F5"
+            BuildableName = "Project-7-Memory.app"
+            BlueprintName = "Project-7-Memory"
+            ReferencedContainer = "container:Project-7-Memory.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +94,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "02B361931CB352A3002565F5"
-            BuildableName = "Project-7-3DTouch.app"
-            BlueprintName = "Project-7-3DTouch"
-            ReferencedContainer = "container:Project-7-3DTouch.xcodeproj">
+            BlueprintIdentifier = "02B361B51CB35DCD002565F5"
+            BuildableName = "Project-7-Memory.app"
+            BlueprintName = "Project-7-Memory"
+            ReferencedContainer = "container:Project-7-Memory.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

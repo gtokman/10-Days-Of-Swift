@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Project-7-3DTouch
+//  Project-7-Memory
 //
 //  Created by g tokman on 4/4/16.
 //  Copyright © 2016 garytokman. All rights reserved.
