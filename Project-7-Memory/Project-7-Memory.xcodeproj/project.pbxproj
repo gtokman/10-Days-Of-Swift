@@ -9,9 +9,7 @@
 /* Begin PBXBuildFile section */
 		02B361BA1CB35DCD002565F5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361B91CB35DCD002565F5 /* AppDelegate.swift */; };
 		02B361BC1CB35DCD002565F5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361BB1CB35DCD002565F5 /* ViewController.swift */; };
-		02B361BF1CB35DCD002565F5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B361BD1CB35DCD002565F5 /* Main.storyboard */; };
 		02B361C11CB35DCD002565F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02B361C01CB35DCD002565F5 /* Assets.xcassets */; };
-		02B361C41CB35DCD002565F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B361C21CB35DCD002565F5 /* LaunchScreen.storyboard */; };
 		02B361CF1CB35DCD002565F5 /* Project_7_MemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361CE1CB35DCD002565F5 /* Project_7_MemoryTests.swift */; };
 		02B361DA1CB35DCD002565F5 /* Project_7_MemoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361D91CB35DCD002565F5 /* Project_7_MemoryUITests.swift */; };
 		02B361E81CB35EF0002565F5 /* GameDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361E71CB35EF0002565F5 /* GameDifficulty.swift */; };
@@ -19,6 +17,7 @@
 		02B361EF1CB3F596002565F5 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361EE1CB3F596002565F5 /* MemoryViewController.swift */; };
 		02B361F11CB40AA3002565F5 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361F01CB40AA3002565F5 /* Deck.swift */; };
 		02B361F31CB418D4002565F5 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361F21CB418D4002565F5 /* CardCell.swift */; };
+		02B361F51CB4254A002565F5 /* ViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361F41CB4254A002565F5 /* ViewControllerExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,9 +41,7 @@
 		02B361B61CB35DCD002565F5 /* Project-7-Memory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-7-Memory.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B361B91CB35DCD002565F5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		02B361BB1CB35DCD002565F5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		02B361BE1CB35DCD002565F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02B361C01CB35DCD002565F5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		02B361C31CB35DCD002565F5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		02B361C51CB35DCD002565F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		02B361CA1CB35DCD002565F5 /* Project-7-MemoryTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project-7-MemoryTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B361CE1CB35DCD002565F5 /* Project_7_MemoryTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_7_MemoryTests.swift; sourceTree = "<group>"; };
@@ -57,6 +54,7 @@
 		02B361EE1CB3F596002565F5 /* MemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
 		02B361F01CB40AA3002565F5 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
 		02B361F21CB418D4002565F5 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
+		02B361F41CB4254A002565F5 /* ViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,14 +105,11 @@
 		02B361B81CB35DCD002565F5 /* Project-7-Memory */ = {
 			isa = PBXGroup;
 			children = (
+				02B361F61CB42573002565F5 /* Supporting */,
 				02B361ED1CB3F57B002565F5 /* Model */,
-				02B361EC1CB3F574002565F5 /* Views */,
 				02B361EB1CB3F56D002565F5 /* Controllers */,
-				02B361B91CB35DCD002565F5 /* AppDelegate.swift */,
 				02B361C01CB35DCD002565F5 /* Assets.xcassets */,
 				02B361C51CB35DCD002565F5 /* Info.plist */,
-				02B361E71CB35EF0002565F5 /* GameDifficulty.swift */,
-				02B361E91CB3F247002565F5 /* ColorExtension.swift */,
 			);
 			path = "Project-7-Memory";
 			sourceTree = "<group>";
@@ -147,21 +142,23 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
-		02B361EC1CB3F574002565F5 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				02B361BD1CB35DCD002565F5 /* Main.storyboard */,
-				02B361C21CB35DCD002565F5 /* LaunchScreen.storyboard */,
-			);
-			name = Views;
-			sourceTree = "<group>";
-		};
 		02B361ED1CB3F57B002565F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				02B361F01CB40AA3002565F5 /* Deck.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		02B361F61CB42573002565F5 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				02B361B91CB35DCD002565F5 /* AppDelegate.swift */,
+				02B361E91CB3F247002565F5 /* ColorExtension.swift */,
+				02B361E71CB35EF0002565F5 /* GameDifficulty.swift */,
+				02B361F41CB4254A002565F5 /* ViewControllerExtension.swift */,
+			);
+			name = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -268,9 +265,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02B361C41CB35DCD002565F5 /* LaunchScreen.storyboard in Resources */,
 				02B361C11CB35DCD002565F5 /* Assets.xcassets in Resources */,
-				02B361BF1CB35DCD002565F5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,6 +294,7 @@
 				02B361BC1CB35DCD002565F5 /* ViewController.swift in Sources */,
 				02B361E81CB35EF0002565F5 /* GameDifficulty.swift in Sources */,
 				02B361BA1CB35DCD002565F5 /* AppDelegate.swift in Sources */,
+				02B361F51CB4254A002565F5 /* ViewControllerExtension.swift in Sources */,
 				02B361F31CB418D4002565F5 /* CardCell.swift in Sources */,
 				02B361EA1CB3F247002565F5 /* ColorExtension.swift in Sources */,
 				02B361EF1CB3F596002565F5 /* MemoryViewController.swift in Sources */,
@@ -335,25 +331,6 @@
 			targetProxy = 02B361D61CB35DCD002565F5 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
-
-/* Begin PBXVariantGroup section */
-		02B361BD1CB35DCD002565F5 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02B361BE1CB35DCD002565F5 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		02B361C21CB35DCD002565F5 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				02B361C31CB35DCD002565F5 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		02B361DC1CB35DCD002565F5 /* Debug */ = {

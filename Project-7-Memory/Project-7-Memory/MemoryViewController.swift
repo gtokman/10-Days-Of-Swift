@@ -15,6 +15,9 @@ class MemoryViewController: UIViewController {
     private let difficulty: Difficulty
     private var collectionView: UICollectionView!
     private var deck: Deck!
+    private var selectedIndexes = [NSIndexPath]()
+    private var numberOfPairs = 0
+    private var score = 0
     
     // Init difficulty
     
@@ -149,18 +152,77 @@ extension MemoryViewController: UICollectionViewDataSource {
 
 extension MemoryViewController: UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        if selectedIndexes.count == 2 || selectedIndexes .contains(indexPath)  {
+            return
+        }
+        
+        selectedIndexes.append(indexPath)
+        
         let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CardCell
         // Flip to front
         cell.upturn()
         
-        // Wait 2 sec, Flip to back
-        execAfter(2) { 
-            cell.downturn()
+        if selectedIndexes.count < 2  {
+            return
+        }
+        
+        let card1 = deck[selectedIndexes[0].row]
+        let card2 = deck[selectedIndexes[1].row]
+        
+        if card1 == card2 {
+            numberOfPairs += 1
+            checkIfFinished()
+            removeCards()
+        } else {
+            score += 1
+            turnCardsFaceDown()
         }
     }
 }
 
+// MARK: Actions
 
+private extension MemoryViewController {
+    func checkIfFinished() {
+        if numberOfPairs == deck.count / 2 {
+            showFinalPopUp()
+        }
+    }
+    
+    func showFinalPopUp() {
+        let alert = UIAlertController(title: "Winner", message: "You won nothing, congrats!, Score: \(score)!", preferredStyle: .Alert)
+        alert.addAction(UIAlertAction(title: "OK", style: .Default, handler: nil))
+        presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func removeCards() {
+        execAfter(1.0) { 
+            self.removeCardsAtPlaces(self.selectedIndexes)
+            self.selectedIndexes = []
+        }
+    }
+    
+    func removeCardsAtPlaces(places: [NSIndexPath]) {
+        for index in selectedIndexes {
+            let cardCell = collectionView.cellForItemAtIndexPath(index) as! CardCell
+            cardCell.remove()
+        }
+    }
+    
+    func turnCardsFaceDown() {
+        execAfter(2.0) { 
+            self.downturnCardsAtPlaces(self.selectedIndexes)
+            self.selectedIndexes = []
+        }
+    }
+    
+    func downturnCardsAtPlaces(places: [NSIndexPath]) {
+        for index in selectedIndexes {
+            let cardCell = collectionView.cellForItemAtIndexPath(index) as! CardCell
+            cardCell.downturn()
+        }
+    }
+}
 
 
 

@@ -42,15 +42,12 @@ class CardCell: UICollectionViewCell {
             self.frontImageView.image = UIImage(named: self.backImageName)
             }, completion: nil)
     }
-}
-
-extension UIViewController {
-    func execAfter(delay: Double, block: ()-> Void) {
-        dispatch_after(
-            dispatch_time(
-                DISPATCH_TIME_NOW,
-                Int64(delay * Double(NSEC_PER_SEC))
-            ),
-            dispatch_get_main_queue(), block)
+    
+    func remove() {
+        UIView.animateWithDuration(1, animations: { 
+            self.alpha = 0
+            }) { (completed) in
+                self.hidden = true
+        }
     }
 }
