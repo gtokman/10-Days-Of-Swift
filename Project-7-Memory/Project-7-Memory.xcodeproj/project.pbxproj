@@ -17,6 +17,8 @@
 		02B361E81CB35EF0002565F5 /* GameDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361E71CB35EF0002565F5 /* GameDifficulty.swift */; };
 		02B361EA1CB3F247002565F5 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361E91CB3F247002565F5 /* ColorExtension.swift */; };
 		02B361EF1CB3F596002565F5 /* MemoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361EE1CB3F596002565F5 /* MemoryViewController.swift */; };
+		02B361F11CB40AA3002565F5 /* Deck.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361F01CB40AA3002565F5 /* Deck.swift */; };
+		02B361F31CB418D4002565F5 /* CardCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361F21CB418D4002565F5 /* CardCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		02B361E71CB35EF0002565F5 /* GameDifficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDifficulty.swift; sourceTree = "<group>"; };
 		02B361E91CB3F247002565F5 /* ColorExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		02B361EE1CB3F596002565F5 /* MemoryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemoryViewController.swift; sourceTree = "<group>"; };
+		02B361F01CB40AA3002565F5 /* Deck.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Deck.swift; sourceTree = "<group>"; };
+		02B361F21CB418D4002565F5 /* CardCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 			children = (
 				02B361BB1CB35DCD002565F5 /* ViewController.swift */,
 				02B361EE1CB3F596002565F5 /* MemoryViewController.swift */,
+				02B361F21CB418D4002565F5 /* CardCell.swift */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -154,6 +159,7 @@
 		02B361ED1CB3F57B002565F5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				02B361F01CB40AA3002565F5 /* Deck.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -289,9 +295,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02B361F11CB40AA3002565F5 /* Deck.swift in Sources */,
 				02B361BC1CB35DCD002565F5 /* ViewController.swift in Sources */,
 				02B361E81CB35EF0002565F5 /* GameDifficulty.swift in Sources */,
 				02B361BA1CB35DCD002565F5 /* AppDelegate.swift in Sources */,
+				02B361F31CB418D4002565F5 /* CardCell.swift in Sources */,
 				02B361EA1CB3F247002565F5 /* ColorExtension.swift in Sources */,
 				02B361EF1CB3F596002565F5 /* MemoryViewController.swift in Sources */,
 			);

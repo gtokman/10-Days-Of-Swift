@@ -14,13 +14,14 @@ class MemoryViewController: UIViewController {
     
     private let difficulty: Difficulty
     private var collectionView: UICollectionView!
-    private var deck: [Int]!
+    private var deck: Deck!
     
     // Init difficulty
     
     init(difficulty: Difficulty) {
         self.difficulty = difficulty
         super.init(nibName: nil, bundle: nil)
+     
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -40,8 +41,15 @@ class MemoryViewController: UIViewController {
     }
     
     private func start() {
-        deck = Array<Int>(count: numCardsNeededDifficulty(difficulty), repeatedValue: 1)
+        deck = createDeck(numCardsNeededDifficulty(difficulty))
         collectionView.reloadData()
+    }
+    
+    private func createDeck(numCards: Int) -> Deck {
+        let fullDeck = Deck.full().shuffled()
+        let halfDeck = fullDeck.deckOfNumberOfcards(numCards/2)
+        
+        return (halfDeck + halfDeck).shuffled()
     }
 }
 
@@ -61,7 +69,7 @@ private extension MemoryViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.scrollEnabled = false
-        collectionView.registerClass(UICollectionViewCell.self, forCellWithReuseIdentifier: "cardCell")
+        collectionView.registerClass(CardCell.self, forCellWithReuseIdentifier: "cardCell")
         collectionView.backgroundColor = .clearColor()
         
         self.view.addSubview(collectionView)
@@ -128,9 +136,10 @@ extension MemoryViewController: UICollectionViewDataSource {
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath)
+        let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! CardCell
         
-        cell.backgroundColor = .sunflower()
+        let card = deck[indexPath.row]
+        cell.renderCardName(card.description, backImageNmae: "back")
         
         return cell
     }
