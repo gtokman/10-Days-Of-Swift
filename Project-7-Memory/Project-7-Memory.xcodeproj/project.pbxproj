@@ -14,6 +14,7 @@
 		02B361C41CB35DCD002565F5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02B361C21CB35DCD002565F5 /* LaunchScreen.storyboard */; };
 		02B361CF1CB35DCD002565F5 /* Project_7_MemoryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361CE1CB35DCD002565F5 /* Project_7_MemoryTests.swift */; };
 		02B361DA1CB35DCD002565F5 /* Project_7_MemoryUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361D91CB35DCD002565F5 /* Project_7_MemoryUITests.swift */; };
+		02B361E81CB35EF0002565F5 /* GameDifficulty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B361E71CB35EF0002565F5 /* GameDifficulty.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		02B361D51CB35DCD002565F5 /* Project-7-MemoryUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Project-7-MemoryUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		02B361D91CB35DCD002565F5 /* Project_7_MemoryUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Project_7_MemoryUITests.swift; sourceTree = "<group>"; };
 		02B361DB1CB35DCD002565F5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		02B361E71CB35EF0002565F5 /* GameDifficulty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDifficulty.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +105,7 @@
 				02B361C01CB35DCD002565F5 /* Assets.xcassets */,
 				02B361C21CB35DCD002565F5 /* LaunchScreen.storyboard */,
 				02B361C51CB35DCD002565F5 /* Info.plist */,
+				02B361E71CB35EF0002565F5 /* GameDifficulty.swift */,
 			);
 			path = "Project-7-Memory";
 			sourceTree = "<group>";
@@ -257,6 +260,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02B361BC1CB35DCD002565F5 /* ViewController.swift in Sources */,
+				02B361E81CB35EF0002565F5 /* GameDifficulty.swift in Sources */,
 				02B361BA1CB35DCD002565F5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
