@@ -1,6 +1,6 @@
 //
 //  ViewController.swift
-//  Project-7-SnapChatMenu
+//  Project-7-3DTouch
 //
 //  Created by g tokman on 4/4/16.
 //  Copyright © 2016 garytokman. All rights reserved.
@@ -10,14 +10,9 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    // MARK: Outlets
-    
-    @IBOutlet var scrollView: UIScrollView!
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-       
-        
+        // Do any additional setup after loading the view, typically from a nib.
     }
 
     override func didReceiveMemoryWarning() {
