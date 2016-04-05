@@ -26,6 +26,31 @@ class CardCell: UICollectionViewCell {
     }
     
     func renderCardName(cardImageName: String, backImageName: String) {
-        <#function body#>
+        self.cardImageName = cardImageName
+        self.backImageName = backImageName
+        frontImageView.image = UIImage(named: self.backImageName)
+    }
+    
+    func upturn() {
+        UIView.transitionWithView(contentView, duration: 1, options: .TransitionFlipFromRight, animations: {
+            self.frontImageView.image = UIImage(named: self.cardImageName)
+            }, completion: nil)
+    }
+    
+    func downturn() {
+        UIView.transitionWithView(contentView, duration: 1, options: .TransitionFlipFromLeft, animations: {
+            self.frontImageView.image = UIImage(named: self.backImageName)
+            }, completion: nil)
+    }
+}
+
+extension UIViewController {
+    func execAfter(delay: Double, block: ()-> Void) {
+        dispatch_after(
+            dispatch_time(
+                DISPATCH_TIME_NOW,
+                Int64(delay * Double(NSEC_PER_SEC))
+            ),
+            dispatch_get_main_queue(), block)
     }
 }

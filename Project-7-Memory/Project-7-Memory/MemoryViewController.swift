@@ -139,7 +139,7 @@ extension MemoryViewController: UICollectionViewDataSource {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cardCell", forIndexPath: indexPath) as! CardCell
         
         let card = deck[indexPath.row]
-        cell.renderCardName(card.description, backImageNmae: "back")
+        cell.renderCardName(card.description, backImageName: "back")
         
         return cell
     }
@@ -149,7 +149,14 @@ extension MemoryViewController: UICollectionViewDataSource {
 
 extension MemoryViewController: UICollectionViewDelegate {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let cell = collectionView.cellForItemAtIndexPath(indexPath) as! CardCell
+        // Flip to front
+        cell.upturn()
         
+        // Wait 2 sec, Flip to back
+        execAfter(2) { 
+            cell.downturn()
+        }
     }
 }
 
