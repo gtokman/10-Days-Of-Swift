@@ -57,4 +57,15 @@
 * Display user location on MapView
 *  *Tools/Frameworks used: Xcode 7.3, CoreLocation, MapKit*
 
+## Day - 7 - Memory
+
+![Memory](http://g.recordit.co/UG7EjLTy9f.gif)
+### I learned how to: 
+* Create UI elements in code
+* Implement Collection View in code
+* Create Card matching model
+* Add basic animations
+* *Tools/Frameworks used: Xcode 7.3, UIKit
+
+
 
