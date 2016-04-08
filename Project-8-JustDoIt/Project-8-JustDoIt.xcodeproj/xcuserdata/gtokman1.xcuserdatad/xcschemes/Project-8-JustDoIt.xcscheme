@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "0221A0B01CB86DB800094EA5"
-               BuildableName = "Poject-8-JustDoit.app"
-               BlueprintName = "Poject-8-JustDoit"
-               ReferencedContainer = "container:Poject-8-JustDoit.xcodeproj">
+               BlueprintIdentifier = "0221A0CE1CB86E5C00094EA5"
+               BuildableName = "Project-8-JustDoIt.app"
+               BlueprintName = "Project-8-JustDoIt"
+               ReferencedContainer = "container:Project-8-JustDoIt.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0221A0B01CB86DB800094EA5"
-            BuildableName = "Poject-8-JustDoit.app"
-            BlueprintName = "Poject-8-JustDoit"
-            ReferencedContainer = "container:Poject-8-JustDoit.xcodeproj">
+            BlueprintIdentifier = "0221A0CE1CB86E5C00094EA5"
+            BuildableName = "Project-8-JustDoIt.app"
+            BlueprintName = "Project-8-JustDoIt"
+            ReferencedContainer = "container:Project-8-JustDoIt.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0221A0B01CB86DB800094EA5"
-            BuildableName = "Poject-8-JustDoit.app"
-            BlueprintName = "Poject-8-JustDoit"
-            ReferencedContainer = "container:Poject-8-JustDoit.xcodeproj">
+            BlueprintIdentifier = "0221A0CE1CB86E5C00094EA5"
+            BuildableName = "Project-8-JustDoIt.app"
+            BlueprintName = "Project-8-JustDoIt"
+            ReferencedContainer = "container:Project-8-JustDoIt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "0221A0B01CB86DB800094EA5"
-            BuildableName = "Poject-8-JustDoit.app"
-            BlueprintName = "Poject-8-JustDoit"
-            ReferencedContainer = "container:Poject-8-JustDoit.xcodeproj">
+            BlueprintIdentifier = "0221A0CE1CB86E5C00094EA5"
+            BuildableName = "Project-8-JustDoIt.app"
+            BlueprintName = "Project-8-JustDoIt"
+            ReferencedContainer = "container:Project-8-JustDoIt.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

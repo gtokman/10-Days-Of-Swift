@@ -1,6 +1,6 @@
 //
 //  AppDelegate.swift
-//  Poject-8-JustDoit
+//  Project-8-JustDoIt
 //
 //  Created by g tokman on 4/8/16.
 //  Copyright © 2016 garytokman. All rights reserved.

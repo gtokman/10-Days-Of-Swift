@@ -7,25 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0221A0B51CB86DB800094EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221A0B41CB86DB800094EA5 /* AppDelegate.swift */; };
-		0221A0B71CB86DB800094EA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221A0B61CB86DB800094EA5 /* ViewController.swift */; };
-		0221A0BA1CB86DB800094EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0221A0B81CB86DB800094EA5 /* Main.storyboard */; };
-		0221A0BC1CB86DB800094EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0221A0BB1CB86DB800094EA5 /* Assets.xcassets */; };
-		0221A0BF1CB86DB800094EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0221A0BD1CB86DB800094EA5 /* LaunchScreen.storyboard */; };
+		0221A0D31CB86E5C00094EA5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221A0D21CB86E5C00094EA5 /* AppDelegate.swift */; };
+		0221A0D51CB86E5C00094EA5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221A0D41CB86E5C00094EA5 /* ViewController.swift */; };
+		0221A0D81CB86E5C00094EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0221A0D61CB86E5C00094EA5 /* Main.storyboard */; };
+		0221A0DA1CB86E5C00094EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0221A0D91CB86E5C00094EA5 /* Assets.xcassets */; };
+		0221A0DD1CB86E5C00094EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0221A0DB1CB86E5C00094EA5 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0221A0B11CB86DB800094EA5 /* Poject-8-JustDoit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Poject-8-JustDoit.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0221A0B41CB86DB800094EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0221A0B61CB86DB800094EA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0221A0B91CB86DB800094EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0221A0BB1CB86DB800094EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0221A0BE1CB86DB800094EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0221A0C01CB86DB800094EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0221A0CF1CB86E5C00094EA5 /* Project-8-JustDoIt.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-8-JustDoIt.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0221A0D21CB86E5C00094EA5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0221A0D41CB86E5C00094EA5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0221A0D71CB86E5C00094EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0221A0D91CB86E5C00094EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0221A0DC1CB86E5C00094EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0221A0DE1CB86E5C00094EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		0221A0AE1CB86DB800094EA5 /* Frameworks */ = {
+		0221A0CC1CB86E5C00094EA5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -35,71 +35,71 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0221A0A81CB86DB800094EA5 = {
+		0221A0C61CB86E5C00094EA5 = {
 			isa = PBXGroup;
 			children = (
-				0221A0B31CB86DB800094EA5 /* Poject-8-JustDoit */,
-				0221A0B21CB86DB800094EA5 /* Products */,
+				0221A0D11CB86E5C00094EA5 /* Project-8-JustDoIt */,
+				0221A0D01CB86E5C00094EA5 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		0221A0B21CB86DB800094EA5 /* Products */ = {
+		0221A0D01CB86E5C00094EA5 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0221A0B11CB86DB800094EA5 /* Poject-8-JustDoit.app */,
+				0221A0CF1CB86E5C00094EA5 /* Project-8-JustDoIt.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		0221A0B31CB86DB800094EA5 /* Poject-8-JustDoit */ = {
+		0221A0D11CB86E5C00094EA5 /* Project-8-JustDoIt */ = {
 			isa = PBXGroup;
 			children = (
-				0221A0B41CB86DB800094EA5 /* AppDelegate.swift */,
-				0221A0B61CB86DB800094EA5 /* ViewController.swift */,
-				0221A0B81CB86DB800094EA5 /* Main.storyboard */,
-				0221A0BB1CB86DB800094EA5 /* Assets.xcassets */,
-				0221A0BD1CB86DB800094EA5 /* LaunchScreen.storyboard */,
-				0221A0C01CB86DB800094EA5 /* Info.plist */,
+				0221A0D21CB86E5C00094EA5 /* AppDelegate.swift */,
+				0221A0D41CB86E5C00094EA5 /* ViewController.swift */,
+				0221A0D61CB86E5C00094EA5 /* Main.storyboard */,
+				0221A0D91CB86E5C00094EA5 /* Assets.xcassets */,
+				0221A0DB1CB86E5C00094EA5 /* LaunchScreen.storyboard */,
+				0221A0DE1CB86E5C00094EA5 /* Info.plist */,
 			);
-			path = "Poject-8-JustDoit";
+			path = "Project-8-JustDoIt";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0221A0B01CB86DB800094EA5 /* Poject-8-JustDoit */ = {
+		0221A0CE1CB86E5C00094EA5 /* Project-8-JustDoIt */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0221A0C31CB86DB800094EA5 /* Build configuration list for PBXNativeTarget "Poject-8-JustDoit" */;
+			buildConfigurationList = 0221A0E11CB86E5C00094EA5 /* Build configuration list for PBXNativeTarget "Project-8-JustDoIt" */;
 			buildPhases = (
-				0221A0AD1CB86DB800094EA5 /* Sources */,
-				0221A0AE1CB86DB800094EA5 /* Frameworks */,
-				0221A0AF1CB86DB800094EA5 /* Resources */,
+				0221A0CB1CB86E5C00094EA5 /* Sources */,
+				0221A0CC1CB86E5C00094EA5 /* Frameworks */,
+				0221A0CD1CB86E5C00094EA5 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Poject-8-JustDoit";
-			productName = "Poject-8-JustDoit";
-			productReference = 0221A0B11CB86DB800094EA5 /* Poject-8-JustDoit.app */;
+			name = "Project-8-JustDoIt";
+			productName = "Project-8-JustDoIt";
+			productReference = 0221A0CF1CB86E5C00094EA5 /* Project-8-JustDoIt.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		0221A0A91CB86DB800094EA5 /* Project object */ = {
+		0221A0C71CB86E5C00094EA5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0730;
 				ORGANIZATIONNAME = garytokman;
 				TargetAttributes = {
-					0221A0B01CB86DB800094EA5 = {
+					0221A0CE1CB86E5C00094EA5 = {
 						CreatedOnToolsVersion = 7.3;
 					};
 				};
 			};
-			buildConfigurationList = 0221A0AC1CB86DB800094EA5 /* Build configuration list for PBXProject "Poject-8-JustDoit" */;
+			buildConfigurationList = 0221A0CA1CB86E5C00094EA5 /* Build configuration list for PBXProject "Project-8-JustDoIt" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -107,54 +107,54 @@
 				en,
 				Base,
 			);
-			mainGroup = 0221A0A81CB86DB800094EA5;
-			productRefGroup = 0221A0B21CB86DB800094EA5 /* Products */;
+			mainGroup = 0221A0C61CB86E5C00094EA5;
+			productRefGroup = 0221A0D01CB86E5C00094EA5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0221A0B01CB86DB800094EA5 /* Poject-8-JustDoit */,
+				0221A0CE1CB86E5C00094EA5 /* Project-8-JustDoIt */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		0221A0AF1CB86DB800094EA5 /* Resources */ = {
+		0221A0CD1CB86E5C00094EA5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0221A0BF1CB86DB800094EA5 /* LaunchScreen.storyboard in Resources */,
-				0221A0BC1CB86DB800094EA5 /* Assets.xcassets in Resources */,
-				0221A0BA1CB86DB800094EA5 /* Main.storyboard in Resources */,
+				0221A0DD1CB86E5C00094EA5 /* LaunchScreen.storyboard in Resources */,
+				0221A0DA1CB86E5C00094EA5 /* Assets.xcassets in Resources */,
+				0221A0D81CB86E5C00094EA5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0221A0AD1CB86DB800094EA5 /* Sources */ = {
+		0221A0CB1CB86E5C00094EA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0221A0B71CB86DB800094EA5 /* ViewController.swift in Sources */,
-				0221A0B51CB86DB800094EA5 /* AppDelegate.swift in Sources */,
+				0221A0D51CB86E5C00094EA5 /* ViewController.swift in Sources */,
+				0221A0D31CB86E5C00094EA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0221A0B81CB86DB800094EA5 /* Main.storyboard */ = {
+		0221A0D61CB86E5C00094EA5 /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0221A0B91CB86DB800094EA5 /* Base */,
+				0221A0D71CB86E5C00094EA5 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		0221A0BD1CB86DB800094EA5 /* LaunchScreen.storyboard */ = {
+		0221A0DB1CB86E5C00094EA5 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0221A0BE1CB86DB800094EA5 /* Base */,
+				0221A0DC1CB86E5C00094EA5 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -162,7 +162,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		0221A0C11CB86DB800094EA5 /* Debug */ = {
+		0221A0DF1CB86E5C00094EA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -207,7 +207,7 @@
 			};
 			name = Debug;
 		};
-		0221A0C21CB86DB800094EA5 /* Release */ = {
+		0221A0E01CB86E5C00094EA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -245,24 +245,24 @@
 			};
 			name = Release;
 		};
-		0221A0C41CB86DB800094EA5 /* Debug */ = {
+		0221A0E21CB86E5C00094EA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Poject-8-JustDoit/Info.plist";
+				INFOPLIST_FILE = "Project-8-JustDoIt/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "xyz.garytokman.Poject-8-JustDoit";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.garytokman.Project-8-JustDoIt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
-		0221A0C51CB86DB800094EA5 /* Release */ = {
+		0221A0E31CB86E5C00094EA5 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = "Poject-8-JustDoit/Info.plist";
+				INFOPLIST_FILE = "Project-8-JustDoIt/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "xyz.garytokman.Poject-8-JustDoit";
+				PRODUCT_BUNDLE_IDENTIFIER = "xyz.garytokman.Project-8-JustDoIt";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -270,24 +270,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0221A0AC1CB86DB800094EA5 /* Build configuration list for PBXProject "Poject-8-JustDoit" */ = {
+		0221A0CA1CB86E5C00094EA5 /* Build configuration list for PBXProject "Project-8-JustDoIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0221A0C11CB86DB800094EA5 /* Debug */,
-				0221A0C21CB86DB800094EA5 /* Release */,
+				0221A0DF1CB86E5C00094EA5 /* Debug */,
+				0221A0E01CB86E5C00094EA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0221A0C31CB86DB800094EA5 /* Build configuration list for PBXNativeTarget "Poject-8-JustDoit" */ = {
+		0221A0E11CB86E5C00094EA5 /* Build configuration list for PBXNativeTarget "Project-8-JustDoIt" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				0221A0C41CB86DB800094EA5 /* Debug */,
-				0221A0C51CB86DB800094EA5 /* Release */,
+				0221A0E21CB86E5C00094EA5 /* Debug */,
+				0221A0E31CB86E5C00094EA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = 0221A0A91CB86DB800094EA5 /* Project object */;
+	rootObject = 0221A0C71CB86E5C00094EA5 /* Project object */;
 }

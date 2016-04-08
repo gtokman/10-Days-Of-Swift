@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Poject-8-JustDoit.xcscheme</key>
+		<key>Project-8-JustDoIt.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
@@ -12,7 +12,7 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0221A0B01CB86DB800094EA5</key>
+		<key>0221A0CE1CB86E5C00094EA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>
