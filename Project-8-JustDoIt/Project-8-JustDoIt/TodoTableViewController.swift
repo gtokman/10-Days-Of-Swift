@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import MGSwipeTableCell
 
 @objc(TodoTableViewController)
 class TodoTableViewController: UITableViewController {
@@ -55,14 +56,64 @@ class TodoTableViewController: UITableViewController {
     
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCellWithIdentifier("TodoCell", forIndexPath: indexPath)
+        let cell = tableView.dequeueReusableCellWithIdentifier("TodoCell", forIndexPath: indexPath) as! MGSwipeTableCell
         
         // Configure the cell...
         if let todo = todos?[indexPath.row] {
             renderCell(cell, todo: todo)
+            setupButtonsForCell(cell, todo: todo)
         }
         
         return cell
+    }
+}
+
+// MARK: - Set up MGSipeTableCell
+
+extension TodoTableViewController {
+    private func setupButtonsForCell(cell: MGSwipeTableCell, todo: Todo) {
+        cell.rightButtons = [
+            
+            MGSwipeButton(title: "Edit", backgroundColor: .blueColor(), padding: 30) { [weak self] sender in
+                self?.editButtonPressed(todo)
+                return true
+            },
+            MGSwipeButton(title: "Delete", backgroundColor: .redColor(), padding: 30) { [ weak self] sender in
+                self?.deleteButtonPressed(todo)
+                return true
+            }
+        ]
+        cell.rightExpansion.buttonIndex = 0
+        
+        cell.leftButtons = [
+            
+            MGSwipeButton(title: "Done", backgroundColor: .greenColor(), padding: 30) { [weak self] sender in
+                self?.doneButtonPressed(todo)
+                return true
+            }
+        ]
+    }
+}
+
+// MARK: - Actions
+
+extension TodoTableViewController {
+    func addButtonPressed(sender: UIButton!) {
+        print("addTodoButtonPressed")
+    }
+    
+    func editButtonPressed(todo: Todo) {
+        print("editButtonPressed")
+    }
+    
+    func deleteButtonPressed(todo: Todo) {
+        todosDatastore?.deleteTodo(todo)
+        refresh()
+    }
+    
+    func doneButtonPressed(todo: Todo) {
+        todosDatastore?.doneTodo(todo)
+        refresh()
     }
 }
 
