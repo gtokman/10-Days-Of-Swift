@@ -15,6 +15,7 @@
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
             <string>Lato-Regular</string>
+            <string>Lato-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -75,10 +76,10 @@
             </objects>
             <point key="canvasLocation" x="1300" y="-130"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Edit Todo Table View Controller-->
         <scene sceneID="rsv-kg-JHR">
             <objects>
-                <tableViewController id="07C-JZ-y8z" sceneMemberID="viewController">
+                <tableViewController id="07C-JZ-y8z" customClass="EditTodoTableViewController" customModule="Project_8_JustDoIt" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" id="zSR-vf-oRb">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -201,10 +202,64 @@
                             <outlet property="delegate" destination="07C-JZ-y8z" id="RHZ-w5-xxj"/>
                         </connections>
                     </tableView>
+                    <connections>
+                        <outlet property="descriptionTextField" destination="gyO-hj-jHv" id="M0j-XK-EcA"/>
+                        <outlet property="dueDateLabel" destination="bb9-M5-cwB" id="kKx-ab-FZk"/>
+                        <outlet property="dueDatePicker" destination="Qd8-6R-dV4" id="CaV-oZ-TKv"/>
+                        <outlet property="listLabel" destination="LTL-xD-kBt" id="cHd-HJ-aO2"/>
+                        <segue destination="BfG-vZ-xLM" kind="show" identifier="AddList" id="Ert-3Q-JKF"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K6J-jv-FqC" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2041" y="-130"/>
+        </scene>
+        <!--Lists-->
+        <scene sceneID="uJf-3a-apa">
+            <objects>
+                <tableViewController id="BfG-vZ-xLM" customClass="ListTableViewController" customModule="Project_8_JustDoIt" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="A19-bq-OtU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ListCell" textLabel="Bhv-Zg-uz2" rowHeight="50" style="IBUITableViewCellStyleDefault" id="Inf-5i-Dy3">
+                                <rect key="frame" x="0.0" y="92" width="600" height="50"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Inf-5i-Dy3" id="SK0-ha-Dvt">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="49.5"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Bhv-Zg-uz2">
+                                            <rect key="frame" x="15" y="0.0" width="570" height="49.5"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" name="Lato-Regular" family="Lato" pointSize="18"/>
+                                            <color key="textColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="BfG-vZ-xLM" id="IOh-9l-61c"/>
+                            <outlet property="delegate" destination="BfG-vZ-xLM" id="M9C-W0-KI4"/>
+                        </connections>
+                    </tableView>
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" title="Lists" id="sU3-4V-hyw">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="rUa-xd-2tP">
+                            <color key="tintColor" red="0.11181893199682236" green="0.1118365004658699" blue="0.1118125319480896" alpha="1" colorSpace="calibratedRGB"/>
+                            <connections>
+                                <action selector="addListButtonTapped:" destination="BfG-vZ-xLM" id="DNG-Eo-0kS"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="mrK-iz-LRw" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2694" y="-130"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="gKL-4m-dwV">
