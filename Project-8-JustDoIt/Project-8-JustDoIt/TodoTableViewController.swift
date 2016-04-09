@@ -98,9 +98,14 @@ extension TodoTableViewController {
 // MARK: - Actions
 
 extension TodoTableViewController {
-    func addButtonPressed(sender: UIButton!) {
-        print("addTodoButtonPressed")
+    
+    
+    @IBAction func addTodoButtonPressed(sender: UIBarButtonItem) {
+        print("AddTodo")
+        performSegueWithIdentifier("AddTodo", sender: self)
     }
+    
+   
     
     func editButtonPressed(todo: Todo) {
         print("editButtonPressed")
