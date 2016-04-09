@@ -1,0 +1,6 @@
+framework module Pods_Project_8_JustDoIt {
+  umbrella header "Pods-Project-8-JustDoIt-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -12,6 +12,10 @@
 		0221A0D81CB86E5C00094EA5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0221A0D61CB86E5C00094EA5 /* Main.storyboard */; };
 		0221A0DA1CB86E5C00094EA5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0221A0D91CB86E5C00094EA5 /* Assets.xcassets */; };
 		0221A0DD1CB86E5C00094EA5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0221A0DB1CB86E5C00094EA5 /* LaunchScreen.storyboard */; };
+		0221A0E51CB86F0A00094EA5 /* TodoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221A0E41CB86F0A00094EA5 /* TodoTableViewController.swift */; };
+		0221A0E81CB8759300094EA5 /* TodoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221A0E71CB8759300094EA5 /* TodoEntity.swift */; };
+		0221A0EC1CB876D800094EA5 /* TodosDatastore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0221A0EB1CB876D800094EA5 /* TodosDatastore.swift */; };
+		3F2ED2BEF57C9E543C23CB55 /* Pods_Project_8_JustDoIt.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DF7623100353CCA8CEF2FB41 /* Pods_Project_8_JustDoIt.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +26,12 @@
 		0221A0D91CB86E5C00094EA5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0221A0DC1CB86E5C00094EA5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0221A0DE1CB86E5C00094EA5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0221A0E41CB86F0A00094EA5 /* TodoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoTableViewController.swift; sourceTree = "<group>"; };
+		0221A0E71CB8759300094EA5 /* TodoEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodoEntity.swift; sourceTree = "<group>"; };
+		0221A0EB1CB876D800094EA5 /* TodosDatastore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TodosDatastore.swift; sourceTree = "<group>"; };
+		132D077955C21C8AF2CEA1DE /* Pods-Project-8-JustDoIt.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-8-JustDoIt.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project-8-JustDoIt/Pods-Project-8-JustDoIt.release.xcconfig"; sourceTree = "<group>"; };
+		24FEAFCA5B4777B738BACD83 /* Pods-Project-8-JustDoIt.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-8-JustDoIt.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project-8-JustDoIt/Pods-Project-8-JustDoIt.debug.xcconfig"; sourceTree = "<group>"; };
+		DF7623100353CCA8CEF2FB41 /* Pods_Project_8_JustDoIt.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_8_JustDoIt.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +39,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F2ED2BEF57C9E543C23CB55 /* Pods_Project_8_JustDoIt.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +51,8 @@
 			children = (
 				0221A0D11CB86E5C00094EA5 /* Project-8-JustDoIt */,
 				0221A0D01CB86E5C00094EA5 /* Products */,
+				E4A5DD719B17AAF732037C05 /* Pods */,
+				ECA14FF8101CF758213FFDEE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +67,50 @@
 		0221A0D11CB86E5C00094EA5 /* Project-8-JustDoIt */ = {
 			isa = PBXGroup;
 			children = (
+				0221A0EA1CB876C600094EA5 /* Datastore */,
+				0221A0E61CB8757800094EA5 /* Model */,
 				0221A0D21CB86E5C00094EA5 /* AppDelegate.swift */,
 				0221A0D41CB86E5C00094EA5 /* ViewController.swift */,
 				0221A0D61CB86E5C00094EA5 /* Main.storyboard */,
 				0221A0D91CB86E5C00094EA5 /* Assets.xcassets */,
 				0221A0DB1CB86E5C00094EA5 /* LaunchScreen.storyboard */,
 				0221A0DE1CB86E5C00094EA5 /* Info.plist */,
+				0221A0E41CB86F0A00094EA5 /* TodoTableViewController.swift */,
 			);
 			path = "Project-8-JustDoIt";
+			sourceTree = "<group>";
+		};
+		0221A0E61CB8757800094EA5 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0221A0E71CB8759300094EA5 /* TodoEntity.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		0221A0EA1CB876C600094EA5 /* Datastore */ = {
+			isa = PBXGroup;
+			children = (
+				0221A0EB1CB876D800094EA5 /* TodosDatastore.swift */,
+			);
+			name = Datastore;
+			sourceTree = "<group>";
+		};
+		E4A5DD719B17AAF732037C05 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				24FEAFCA5B4777B738BACD83 /* Pods-Project-8-JustDoIt.debug.xcconfig */,
+				132D077955C21C8AF2CEA1DE /* Pods-Project-8-JustDoIt.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		ECA14FF8101CF758213FFDEE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				DF7623100353CCA8CEF2FB41 /* Pods_Project_8_JustDoIt.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +120,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0221A0E11CB86E5C00094EA5 /* Build configuration list for PBXNativeTarget "Project-8-JustDoIt" */;
 			buildPhases = (
+				1DC2A3B2F75004295762A5CA /* Check Pods Manifest.lock */,
 				0221A0CB1CB86E5C00094EA5 /* Sources */,
 				0221A0CC1CB86E5C00094EA5 /* Frameworks */,
 				0221A0CD1CB86E5C00094EA5 /* Resources */,
+				35323B4513275476ABFFA3CF /* Embed Pods Frameworks */,
+				B5DA317715507E9B4EC2B202 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,12 +182,63 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1DC2A3B2F75004295762A5CA /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		35323B4513275476ABFFA3CF /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project-8-JustDoIt/Pods-Project-8-JustDoIt-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B5DA317715507E9B4EC2B202 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Project-8-JustDoIt/Pods-Project-8-JustDoIt-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0221A0CB1CB86E5C00094EA5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0221A0EC1CB876D800094EA5 /* TodosDatastore.swift in Sources */,
 				0221A0D51CB86E5C00094EA5 /* ViewController.swift in Sources */,
+				0221A0E51CB86F0A00094EA5 /* TodoTableViewController.swift in Sources */,
+				0221A0E81CB8759300094EA5 /* TodoEntity.swift in Sources */,
 				0221A0D31CB86E5C00094EA5 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -247,6 +350,7 @@
 		};
 		0221A0E21CB86E5C00094EA5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 24FEAFCA5B4777B738BACD83 /* Pods-Project-8-JustDoIt.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Project-8-JustDoIt/Info.plist";
@@ -258,6 +362,7 @@
 		};
 		0221A0E31CB86E5C00094EA5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 132D077955C21C8AF2CEA1DE /* Pods-Project-8-JustDoIt.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Project-8-JustDoIt/Info.plist";
@@ -286,6 +391,7 @@
 				0221A0E31CB86E5C00094EA5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
