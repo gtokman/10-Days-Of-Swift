@@ -10,13 +10,17 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
+    
+    private let skView = SKView()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        if let scene = GameScene(fileNamed:"GameScene") {
-            // Configure the view.
-            let skView = self.view as! SKView
+        skView.frame = view.bounds
+        view.addSubview(skView)
+        
+        if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
+            scene.size = skView.frame.size
             skView.showsFPS = true
             skView.showsNodeCount = true
             
@@ -49,5 +53,23 @@ class GameViewController: UIViewController {
 
     override func prefersStatusBarHidden() -> Bool {
         return true
+    }
+}
+
+// MARK: - Convienece method
+
+extension SKNode {
+    class func unarchiveFromFile(file : NSString) -> SKNode? {
+        if let path = NSBundle.mainBundle().pathForResource(file as String, ofType: "sks") {
+            let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
+            let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+            
+            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
+            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
+            archiver.finishDecoding()
+            return scene
+        } else {
+            return nil
+        }
     }
 }
