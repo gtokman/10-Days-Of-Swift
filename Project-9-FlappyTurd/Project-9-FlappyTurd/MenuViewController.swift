@@ -15,7 +15,7 @@ class MenuViewController: UIViewController {
     // MARK: - Properties
     
     private let playButton = HTPressableButton(frame: CGRectMake(0, 0, 260, 50), buttonStyle: .Rect)
-    private let gameCenterButton = HTPressableButton(frame: CGRectMake(0, 0, 260, 50), buttonStyle: .Rect)
+	private let gameCenterButton = HTPressableButton(frame: CGRectMake(0, 0, 260, 50), buttonStyle: .Rect)
 
     override func viewDidLoad() {
         super.viewDidLoad()

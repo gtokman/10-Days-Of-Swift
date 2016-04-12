@@ -86,8 +86,10 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Project-9-FlappyTurd/Cartography.framework"
   install_framework "Pods-Project-9-FlappyTurd/HTPressableButton.framework"
+  install_framework "Pods-Project-9-FlappyTurd/SIAlertView.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Project-9-FlappyTurd/Cartography.framework"
   install_framework "Pods-Project-9-FlappyTurd/HTPressableButton.framework"
+  install_framework "Pods-Project-9-FlappyTurd/SIAlertView.framework"
 fi

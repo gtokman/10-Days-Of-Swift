@@ -11,68 +11,69 @@ import SpriteKit
 
 class GameViewController: UIViewController {
 
-    private let skView = SKView()
+	private let skView = SKView()
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
+	override func viewDidLoad() {
+		super.viewDidLoad()
 
-        skView.frame = view.bounds
-        view.addSubview(skView)
+		skView.frame = view.bounds
+		view.addSubview(skView)
 
-        if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
-            scene.size = skView.frame.size
-            skView.showsFPS = true
-            skView.showsNodeCount = true
+		createTheScene()
+	}
 
-            /* Sprite Kit applies additional optimizations to improve rendering performance */
-            skView.ignoresSiblingOrder = true
+	private func createTheScene() {
 
-            /* Set the scale mode to scale to fit the window */
-            scene.scaleMode = .AspectFill
+		let scene = GameScene.unarchiveFromFile("GameScene")
+		if let scene = scene as? GameScene {
+			scene.size = skView.frame.size
+			skView.showsFPS = true
+			skView.showsNodeCount = true
+			skView.ignoresSiblingOrder = true
+			scene.scaleMode = .AspectFill
 
+			scene.onPlayAgainPressed = { [weak self] in
+				self?.createTheScene()
+			}
 
-            skView.presentScene(scene)
-        }
+			scene.onCancelPressed = { [weak self] in
+				self?.dismissViewControllerAnimated(true, completion: nil)
+			}
+			skView.presentScene(scene)
+		}
+	}
 
+	override func shouldAutorotate() -> Bool {
+		return true
+	}
 
-    }
+	override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+		if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
+			return .AllButUpsideDown
+		} else {
+			return .All
+		}
+	}
 
-    override func shouldAutorotate() -> Bool {
-        return true
-    }
-
-    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
-        if UIDevice.currentDevice().userInterfaceIdiom == .Phone {
-            return .AllButUpsideDown
-        } else {
-            return .All
-        }
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Release any cached data, images, etc that aren't in use.
-    }
-
-    override func prefersStatusBarHidden() -> Bool {
-        return true
-    }
+	override func prefersStatusBarHidden() -> Bool {
+		return true
+	}
 }
 
 // MARK: - Convienece method
 
 extension SKNode {
-    class func unarchiveFromFile(file: NSString) -> SKNode? {
-        if let path = NSBundle.mainBundle().pathForResource(file as String, ofType: "sks") {
-            let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
-            let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
+	class func unarchiveFromFile(file: NSString) -> SKNode? {
+		if let path = NSBundle.mainBundle().pathForResource(file as String, ofType: "sks") {
+			let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
+			let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
 
-            archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
-            let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
-            archiver.finishDecoding()
-            return scene
-        } else {
-            return nil
-        }
-    }
+			archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
+			let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
+			archiver.finishDecoding()
+			return scene
+		} else {
+			return nil
+		}
+	}
 }

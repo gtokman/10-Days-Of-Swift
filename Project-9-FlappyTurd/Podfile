@@ -12,5 +12,8 @@ target 'Project-9-FlappyTurd' do
     # Custom Button
     pod 'HTPressableButton', '~> 1.3.2'
 
+    # Alert
+    pod ‘SIAlertView', '~> 1.3'
+
 end
 

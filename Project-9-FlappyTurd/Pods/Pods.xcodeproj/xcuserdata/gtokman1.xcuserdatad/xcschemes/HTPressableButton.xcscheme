@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "7FEF77C304F58B4306F448A2D383D419"
-               BlueprintName = "HTPressableButton"
-               ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "HTPressableButton.framework">
+               BuildableIdentifier = 'primary'
+               BlueprintIdentifier = '2742E953C2A045231968B154'
+               BlueprintName = 'HTPressableButton'
+               ReferencedContainer = 'container:Pods.xcodeproj'
+               BuildableName = 'HTPressableButton.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

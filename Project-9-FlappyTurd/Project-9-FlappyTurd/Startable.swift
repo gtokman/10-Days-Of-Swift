@@ -10,7 +10,6 @@ import Foundation
 import SpriteKit
 
 protocol Startable {
-    func start()
-    func stop()
+	func start()
+	func stop()
 }
-

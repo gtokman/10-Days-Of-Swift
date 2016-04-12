@@ -19,15 +19,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>SIAlertView.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>7FEF77C304F58B4306F448A2D383D419</key>
+		<key>004C2C3DA3CDE37DF74B6757BFFF810B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C264D1AD7E149FC7B55D61F4BCABB97D</key>
+		<key>364726C3BC3E08170ED69E363F3B6539</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>7FEF77C304F58B4306F448A2D383D419</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -13,6 +13,7 @@ class Bird: Startable {
 	// Properties
 	private var node: SKSpriteNode!
 	private let textureNames: [String]
+	private var dying = false
 
 	var position: CGPoint {
 		set { node.position = newValue }
@@ -38,8 +39,11 @@ private extension Bird {
 		let birdNode = SKSpriteNode(imageNamed: textureNames.first!)
 		birdNode.zPosition = 2.0
 
-		birdNode.physicsBody = SKPhysicsBody.rectSize(birdNode.size) {
-			$0.dynamic = true
+		birdNode.physicsBody = SKPhysicsBody.rectSize(birdNode.size.scale(0.8)) { (body) in
+			body.dynamic = true
+			body.categoryBitMask = BodyType.bird.rawValue
+			body.collisionBitMask = BodyType.bird.rawValue
+			body.contactTestBitMask = BodyType.ground.rawValue | BodyType.pipe.rawValue | BodyType.gap.rawValue
 		}
 
 		return birdNode
@@ -78,8 +82,10 @@ extension Bird {
 extension Bird {
 
 	func flap() {
-		node.physicsBody!.velocity = CGVector(dx: 0, dy: 0)
-		node.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 8))
+		if !dying {
+			node.physicsBody!.velocity = CGVector(dx: 0, dy: 0)
+			node.physicsBody!.applyImpulse(CGVector(dx: 0, dy: 6))
+		}
 	}
 
 	func update() {
@@ -91,5 +97,10 @@ extension Bird {
 		default:
 			node.zRotation = 0.0
 		}
+	}
+
+	func pushDown() {
+		dying = true
+		node.physicsBody!.applyImpulse(CGVector(dx: 0, dy: -10))
 	}
 }
