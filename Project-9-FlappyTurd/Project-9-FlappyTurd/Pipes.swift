@@ -63,7 +63,7 @@ private extension Pipes {
 		PipesNode(topPipeTexture: topPipeTexture, bottomPipeTexture: bottomPipeTexture, centerY: centerPipes()).addTo(parentNode).start()
 	}
 
-	func createPipes() -> CGFloat {
+	func centerPipes() -> CGFloat {
 		return parentNode.size.height / 2 - 100 + 20 * CGFloat(arc4random_uniform(10))
 	}
 }
