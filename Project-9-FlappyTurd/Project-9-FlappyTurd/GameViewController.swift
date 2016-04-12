@@ -10,7 +10,7 @@ import UIKit
 import SpriteKit
 
 class GameViewController: UIViewController {
-    
+
     private let skView = SKView()
 
     override func viewDidLoad() {
@@ -18,20 +18,23 @@ class GameViewController: UIViewController {
 
         skView.frame = view.bounds
         view.addSubview(skView)
-        
+
         if let scene = GameScene.unarchiveFromFile("GameScene") as? GameScene {
             scene.size = skView.frame.size
             skView.showsFPS = true
             skView.showsNodeCount = true
-            
+
             /* Sprite Kit applies additional optimizations to improve rendering performance */
             skView.ignoresSiblingOrder = true
-            
+
             /* Set the scale mode to scale to fit the window */
             scene.scaleMode = .AspectFill
-            
+
+
             skView.presentScene(scene)
         }
+
+
     }
 
     override func shouldAutorotate() -> Bool {
@@ -59,11 +62,11 @@ class GameViewController: UIViewController {
 // MARK: - Convienece method
 
 extension SKNode {
-    class func unarchiveFromFile(file : NSString) -> SKNode? {
+    class func unarchiveFromFile(file: NSString) -> SKNode? {
         if let path = NSBundle.mainBundle().pathForResource(file as String, ofType: "sks") {
             let sceneData = try! NSData(contentsOfFile: path, options: .DataReadingMappedIfSafe)
             let archiver = NSKeyedUnarchiver(forReadingWithData: sceneData)
-            
+
             archiver.setClass(self.classForKeyedUnarchiver(), forClassName: "SKScene")
             let scene = archiver.decodeObjectForKey(NSKeyedArchiveRootObjectKey) as! GameScene
             archiver.finishDecoding()

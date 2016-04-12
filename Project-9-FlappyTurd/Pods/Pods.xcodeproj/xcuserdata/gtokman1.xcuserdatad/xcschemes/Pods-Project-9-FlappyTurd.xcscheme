@@ -13,11 +13,11 @@
             buildForProfiling = "YES"
             buildForArchiving = "YES">
             <BuildableReference
-               BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6DB841CD97C418688540EF62'
-               BlueprintName = 'Pods-Project-9-FlappyTurd'
-               ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_Project_9_FlappyTurd.framework'>
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "C264D1AD7E149FC7B55D61F4BCABB97D"
+               BlueprintName = "Pods-Project-9-FlappyTurd"
+               ReferencedContainer = "container:Pods.xcodeproj"
+               BuildableName = "Pods_Project_9_FlappyTurd.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

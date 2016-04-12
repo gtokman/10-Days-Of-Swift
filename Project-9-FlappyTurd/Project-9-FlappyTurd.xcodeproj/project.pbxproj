@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		023695021CBC6C87002AAA43 /* Bird.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023695011CBC6C87002AAA43 /* Bird.swift */; };
+		0236952A1CBC7A8B002AAA43 /* SKPysicsBody+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023695291CBC7A8B002AAA43 /* SKPysicsBody+Extension.swift */; };
+		0236959D1CBC8CFA002AAA43 /* Pipes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0236959C1CBC8CFA002AAA43 /* Pipes.swift */; };
+		023695A61CBC90C9002AAA43 /* PipesNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 023695A51CBC90C9002AAA43 /* PipesNode.swift */; };
 		025F7C831CBBFAC7000B5B0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F7C821CBBFAC7000B5B0A /* AppDelegate.swift */; };
 		025F7C851CBBFAC7000B5B0A /* GameScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 025F7C841CBBFAC7000B5B0A /* GameScene.sks */; };
 		025F7C871CBBFAC7000B5B0A /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F7C861CBBFAC7000B5B0A /* GameScene.swift */; };
@@ -17,10 +21,15 @@
 		025F7C991CBBFD22000B5B0A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F7C981CBBFD22000B5B0A /* MenuViewController.swift */; };
 		025F7C9B1CBC0900000B5B0A /* Startable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F7C9A1CBC0900000B5B0A /* Startable.swift */; };
 		025F7C9F1CBC0992000B5B0A /* Background.swift in Sources */ = {isa = PBXBuildFile; fileRef = 025F7C9E1CBC0992000B5B0A /* Background.swift */; };
+		876CAAE91D6D167EE55FF1CB /* ParallaxNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 876CA0DDB71DCBBCEBF80E96 /* ParallaxNode.swift */; };
 		C19D9AE9F34398ADB7A82630 /* Pods_Project_9_FlappyTurd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA1FF8A7E0349DFFA6A00DBC /* Pods_Project_9_FlappyTurd.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		023695011CBC6C87002AAA43 /* Bird.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bird.swift; sourceTree = "<group>"; };
+		023695291CBC7A8B002AAA43 /* SKPysicsBody+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "SKPysicsBody+Extension.swift"; sourceTree = "<group>"; };
+		0236959C1CBC8CFA002AAA43 /* Pipes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pipes.swift; sourceTree = "<group>"; };
+		023695A51CBC90C9002AAA43 /* PipesNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PipesNode.swift; sourceTree = "<group>"; };
 		025F7C7F1CBBFAC7000B5B0A /* Project-9-FlappyTurd.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Project-9-FlappyTurd.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		025F7C821CBBFAC7000B5B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		025F7C841CBBFAC7000B5B0A /* GameScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = GameScene.sks; sourceTree = "<group>"; };
@@ -34,6 +43,7 @@
 		025F7C9A1CBC0900000B5B0A /* Startable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Startable.swift; sourceTree = "<group>"; };
 		025F7C9E1CBC0992000B5B0A /* Background.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Background.swift; sourceTree = "<group>"; };
 		41E94F5F088005FCF0EBAA11 /* Pods-Project-9-FlappyTurd.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-9-FlappyTurd.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Project-9-FlappyTurd/Pods-Project-9-FlappyTurd.debug.xcconfig"; sourceTree = "<group>"; };
+		876CA0DDB71DCBBCEBF80E96 /* ParallaxNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParallaxNode.swift; sourceTree = "<group>"; };
 		99540892A927EF2B7CF1B0C6 /* Pods-Project-9-FlappyTurd.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Project-9-FlappyTurd.release.xcconfig"; path = "Pods/Target Support Files/Pods-Project-9-FlappyTurd/Pods-Project-9-FlappyTurd.release.xcconfig"; sourceTree = "<group>"; };
 		DA1FF8A7E0349DFFA6A00DBC /* Pods_Project_9_FlappyTurd.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Project_9_FlappyTurd.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,6 +60,37 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		023694FF1CBC6C3B002AAA43 /* Sprites */ = {
+			isa = PBXGroup;
+			children = (
+				025F7C9A1CBC0900000B5B0A /* Startable.swift */,
+				876CA0DDB71DCBBCEBF80E96 /* ParallaxNode.swift */,
+				025F7C9E1CBC0992000B5B0A /* Background.swift */,
+				023695011CBC6C87002AAA43 /* Bird.swift */,
+				0236959C1CBC8CFA002AAA43 /* Pipes.swift */,
+				023695A51CBC90C9002AAA43 /* PipesNode.swift */,
+			);
+			name = Sprites;
+			sourceTree = "<group>";
+		};
+		023695001CBC6C45002AAA43 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				025F7C881CBBFAC7000B5B0A /* GameViewController.swift */,
+				025F7C981CBBFD22000B5B0A /* MenuViewController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		0236959A1CBC8C4D002AAA43 /* GameScene */ = {
+			isa = PBXGroup;
+			children = (
+				025F7C841CBBFAC7000B5B0A /* GameScene.sks */,
+				025F7C861CBBFAC7000B5B0A /* GameScene.swift */,
+			);
+			name = GameScene;
+			sourceTree = "<group>";
+		};
 		025F7C761CBBFAC7000B5B0A = {
 			isa = PBXGroup;
 			children = (
@@ -71,17 +112,15 @@
 		025F7C811CBBFAC7000B5B0A /* Project-9-FlappyTurd */ = {
 			isa = PBXGroup;
 			children = (
+				0236959A1CBC8C4D002AAA43 /* GameScene */,
+				023695001CBC6C45002AAA43 /* Controller */,
+				023694FF1CBC6C3B002AAA43 /* Sprites */,
 				025F7C821CBBFAC7000B5B0A /* AppDelegate.swift */,
-				025F7C841CBBFAC7000B5B0A /* GameScene.sks */,
-				025F7C861CBBFAC7000B5B0A /* GameScene.swift */,
-				025F7C881CBBFAC7000B5B0A /* GameViewController.swift */,
 				025F7C8A1CBBFAC7000B5B0A /* Main.storyboard */,
 				025F7C8D1CBBFAC7000B5B0A /* Assets.xcassets */,
 				025F7C8F1CBBFAC7000B5B0A /* LaunchScreen.storyboard */,
 				025F7C921CBBFAC7000B5B0A /* Info.plist */,
-				025F7C981CBBFD22000B5B0A /* MenuViewController.swift */,
-				025F7C9A1CBC0900000B5B0A /* Startable.swift */,
-				025F7C9E1CBC0992000B5B0A /* Background.swift */,
+				023695291CBC7A8B002AAA43 /* SKPysicsBody+Extension.swift */,
 			);
 			path = "Project-9-FlappyTurd";
 			sourceTree = "<group>";
@@ -227,11 +266,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				025F7C9B1CBC0900000B5B0A /* Startable.swift in Sources */,
+				0236959D1CBC8CFA002AAA43 /* Pipes.swift in Sources */,
 				025F7C871CBBFAC7000B5B0A /* GameScene.swift in Sources */,
 				025F7C891CBBFAC7000B5B0A /* GameViewController.swift in Sources */,
 				025F7C831CBBFAC7000B5B0A /* AppDelegate.swift in Sources */,
 				025F7C991CBBFD22000B5B0A /* MenuViewController.swift in Sources */,
 				025F7C9F1CBC0992000B5B0A /* Background.swift in Sources */,
+				023695021CBC6C87002AAA43 /* Bird.swift in Sources */,
+				023695A61CBC90C9002AAA43 /* PipesNode.swift in Sources */,
+				0236952A1CBC7A8B002AAA43 /* SKPysicsBody+Extension.swift in Sources */,
+				876CAAE91D6D167EE55FF1CB /* ParallaxNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
