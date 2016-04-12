@@ -65,7 +65,24 @@
 * Implement Collection View in code
 * Create Card matching model
 * Add basic animations
-* *Tools/Frameworks used: Xcode 7.3, UIKit
+* *Tools/Frameworks used: Xcode 7.3, UIKit*
 
+## Day - 8 - Just Do It
 
+![JustDoIt](http://g.recordit.co/kubHhK9dn7.gif)
+### I learned how to:
+* Create UI elements in storyboard
+* Pass data between ViewControllers
+* Create dynamic data models
+* *Tools/Frameworks used: Xcode 7.3, [MGSwipeTableCell](https://github.com/MortimerGoro/MGSwipeTableCell)*
+
+## Day - 9 - Flappy Turd
+
+![Flappy](http://g.recordit.co/2CIMKnwH0Y.gif)
+* Fundamentals of Spritekit
+* Physics and collision detection between nodes
+* Add animations with actions
+* Create parallax effect
+* Layout nodes in code
+* *Tools/Frameworks used: Xcode 7.3, SpriteKit, [HTPressableButton](https://github.com/herinkc/HTPressableButton), [SIAlertView](https://github.com/Sumi-Interactive/SIAlertView)*
 
