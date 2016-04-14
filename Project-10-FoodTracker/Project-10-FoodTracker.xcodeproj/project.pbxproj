@@ -65,6 +65,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		024639A31CBF2FDB00F5B82E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				02B1D70F1CBEC6E500512509 /* Meal.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		024639A41CBF2FE300F5B82E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02B1D6D81CBE986300512509 /* Main.storyboard */,
+				02B1D6DD1CBE986300512509 /* LaunchScreen.storyboard */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		024639A51CBF2FED00F5B82E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				02B1D72E1CBEF3F000512509 /* MealTableViewController.swift */,
+				02B1D7271CBEEF3E00512509 /* MealTableViewCell.swift */,
+				02B1D6D61CBE986300512509 /* MealViewController.swift */,
+				02B1D6FC1CBEB27700512509 /* RatingController.swift */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		02B1D6C81CBE986300512509 = {
 			isa = PBXGroup;
 			children = (
@@ -86,15 +114,11 @@
 		02B1D6D31CBE986300512509 /* Project-10-FoodTracker */ = {
 			isa = PBXGroup;
 			children = (
+				024639A51CBF2FED00F5B82E /* Controller */,
+				024639A41CBF2FE300F5B82E /* View */,
+				024639A31CBF2FDB00F5B82E /* Model */,
 				02B1D6D41CBE986300512509 /* AppDelegate.swift */,
-				02B1D6D61CBE986300512509 /* MealViewController.swift */,
-				02B1D70F1CBEC6E500512509 /* Meal.swift */,
-				02B1D6FC1CBEB27700512509 /* RatingController.swift */,
-				02B1D7271CBEEF3E00512509 /* MealTableViewCell.swift */,
-				02B1D72E1CBEF3F000512509 /* MealTableViewController.swift */,
-				02B1D6D81CBE986300512509 /* Main.storyboard */,
 				02B1D6DB1CBE986300512509 /* Assets.xcassets */,
-				02B1D6DD1CBE986300512509 /* LaunchScreen.storyboard */,
 				02B1D6E01CBE986300512509 /* Info.plist */,
 			);
 			path = "Project-10-FoodTracker";
@@ -408,6 +432,7 @@
 				02B1D6F01CBE986400512509 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		02B1D6F11CBE986400512509 /* Build configuration list for PBXNativeTarget "Project-10-FoodTrackerTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +441,7 @@
 				02B1D6F31CBE986400512509 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
