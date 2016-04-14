@@ -79,10 +79,23 @@
 ## Day - 9 - Flappy Turd
 
 ![Flappy](http://g.recordit.co/2CIMKnwH0Y.gif)
+### I learned how to: 
 * Fundamentals of Spritekit
 * Physics and collision detection between nodes
 * Add animations with actions
 * Create parallax effect
 * Layout nodes in code
 * *Tools/Frameworks used: Xcode 7.3, SpriteKit, [HTPressableButton](https://github.com/herinkc/HTPressableButton), [SIAlertView](https://github.com/Sumi-Interactive/SIAlertView)*
+
+## Day - 10 - Food Tracker
+
+![Food Tracker](http://g.recordit.co/pJkT4fDoLZ.gif)
+### I learned how to: 
+* Lay out elements with UIStackView
+* Create dynamic data models
+* Pass data between ViewControllers
+* Create rating UIView in code
+* Add data persistence with NSCoding Protocol
+*  *Tools/Frameworks used: Xcode 7.3, UIKit
+
 
