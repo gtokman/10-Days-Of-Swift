@@ -29,6 +29,17 @@ class SwifterTableViewController: UITableViewController {
 		loadSweetData()
 	}
 
+	// Alert
+	func alertUserError(title: String, message: String, buttonTitle: String) {
+
+		let alertView = SIAlertView(title: title, andMessage: message)
+
+		alertView.addButtonWithTitle(buttonTitle, type: .Default, handler: nil)
+		alertView.buttonColor = .redColor()
+
+		alertView.show()
+	}
+
 	// MARK: - Table view data source
 
 	override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,6 +69,14 @@ class SwifterTableViewController: UITableViewController {
 	// MARK: - Actions
 
 	@IBAction func sendSweet(sender: UIBarButtonItem) {
+		saveSweetData()
+	}
+}
+
+// MARK: - Save Cloudkit data
+
+extension SwifterTableViewController {
+	func saveSweetData() {
 
 		let alertView = UIAlertController(title: "New Sweet", message: "Say something Sweet 😎", preferredStyle: .Alert)
 		alertView.addTextFieldWithConfigurationHandler { (textfield) in
@@ -84,6 +103,9 @@ class SwifterTableViewController: UITableViewController {
 				// Save fail
 				guard error == nil else {
 					print("Error saving Sweet 😣 Error: \(error)")
+					dispatch_async(dispatch_get_main_queue()) {
+						self.alertUserError("Error", message: "Error saving Sweet", buttonTitle: "OK")
+					}
 					return
 				}
 
@@ -126,6 +148,9 @@ extension SwifterTableViewController {
 			// Check for nil
 			guard error == nil, let newSweets = results else {
 				print("Error loading data 😬 Error: \(error)")
+				dispatch_async(dispatch_get_main_queue()) {
+					self.alertUserError("Error", message: "Could not load Sweets, check connectivity", buttonTitle: "OK")
+				}
 				return
 			}
 

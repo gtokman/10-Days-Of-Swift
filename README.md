@@ -98,4 +98,13 @@
 * Add data persistence with NSCoding Protocol
 *  *Tools/Frameworks used: Xcode 7.3, UIKit
 
+## Day - 11 - Swifter
+
+![Swifter](http://g.recordit.co/ItFzQW7e6J.gif)
+### I learned how to:
+* Upload data to CloudKit
+* Load data from CloudKit
+* Sort data with Predicates
+* *Tools/Frameworks used: Xcode 7.3, UIKit, CloudKit*
+
 
