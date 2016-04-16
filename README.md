@@ -96,7 +96,7 @@
 * Pass data between ViewControllers
 * Create rating UIView in code
 * Add data persistence with NSCoding Protocol
-*  *Tools/Frameworks used: Xcode 7.3, UIKit
+*  *Tools/Frameworks used: Xcode 7.3, UIKit*
 
 ## Day - 11 - Swifter
 
@@ -114,7 +114,7 @@
 * iOS Networking
 * Create a data model
 * Create Views using xib file
-* Tools/Frameworks used: Xcode 7.3, UIKit, [SwiftyJson](https://github.com/SwiftyJSON/SwiftyJSON), [MONActivityIndicatorView](https://github.com/mownier/MONActivityIndicatorView)
+* *Tools/Frameworks used: Xcode 7.3, UIKit, [SwiftyJson](https://github.com/SwiftyJSON/SwiftyJSON), [MONActivityIndicatorView](https://github.com/mownier/MONActivityIndicatorView)*
 
 
 
