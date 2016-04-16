@@ -36,7 +36,7 @@
                                             </mask>
                                         </variation>
                                     </label>
-                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter a title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="phi-cj-rb9">
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="Enter a title" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="phi-cj-rb9">
                                         <rect key="frame" x="200" y="110" width="200" height="35"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="200" id="mqa-Xq-6O3"/>
@@ -46,23 +46,26 @@
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FbW-IZ-XqF">
-                                        <rect key="frame" x="260" y="155" width="80" height="60"/>
+                                        <rect key="frame" x="260" y="155" width="80" height="40"/>
+                                        <color key="backgroundColor" red="0.96470588239999999" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="60" id="arT-7z-qHk"/>
+                                            <constraint firstAttribute="height" constant="40" id="arT-7z-qHk"/>
                                             <constraint firstAttribute="width" constant="80" id="ecA-tc-avR"/>
                                         </constraints>
-                                        <state key="normal" title="Search"/>
+                                        <state key="normal" title="Search">
+                                            <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="searchForMusicButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="yQi-Xr-CfY"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Results" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pl-pv-fFo">
-                                        <rect key="frame" x="0.0" y="225" width="600" height="65"/>
+                                        <rect key="frame" x="0.0" y="205" width="600" height="85"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0OH-Qq-XgK">
+                                    <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" pagingEnabled="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0OH-Qq-XgK">
                                         <rect key="frame" x="0.0" y="300" width="600" height="250"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="600" id="Pij-74-zv5"/>
@@ -78,21 +81,30 @@
                                         </variation>
                                     </scrollView>
                                     <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="mZ9-c0-Rcf">
-                                        <rect key="frame" x="280" y="560" width="39" height="40"/>
+                                        <rect key="frame" x="281" y="560" width="39" height="40"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="39" id="PIm-dD-6Sa"/>
                                             <constraint firstAttribute="height" constant="40" id="o4g-hH-30l"/>
                                         </constraints>
                                         <color key="pageIndicatorTintColor" red="0.96470588239999999" green="0.72156862749999995" blue="0.72156862749999995" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="currentPageIndicatorTintColor" red="0.30196078430000001" green="0.81568627449999997" blue="0.88235294119999996" alpha="1" colorSpace="calibratedRGB"/>
                                     </pageControl>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstItem="mZ9-c0-Rcf" firstAttribute="top" secondItem="0OH-Qq-XgK" secondAttribute="bottom" constant="10" id="BEF-O4-dsR"/>
                                     <constraint firstItem="waI-y6-xdi" firstAttribute="top" secondItem="yYN-nW-qUr" secondAttribute="top" id="LB3-Du-9VF"/>
                                     <constraint firstAttribute="trailing" secondItem="waI-y6-xdi" secondAttribute="trailing" id="LGJ-v4-Q82"/>
                                     <constraint firstItem="8pl-pv-fFo" firstAttribute="leading" secondItem="yYN-nW-qUr" secondAttribute="leading" id="TM3-Gl-Prf"/>
                                     <constraint firstItem="waI-y6-xdi" firstAttribute="leading" secondItem="yYN-nW-qUr" secondAttribute="leading" id="b0f-od-KSE"/>
                                     <constraint firstAttribute="trailing" secondItem="8pl-pv-fFo" secondAttribute="trailing" id="eZk-zj-9Z4"/>
+                                    <constraint firstItem="0OH-Qq-XgK" firstAttribute="top" secondItem="8pl-pv-fFo" secondAttribute="bottom" constant="10" id="haO-I8-lAG"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="haO-I8-lAG"/>
+                                        <exclude reference="BEF-O4-dsR"/>
+                                    </mask>
+                                </variation>
                             </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

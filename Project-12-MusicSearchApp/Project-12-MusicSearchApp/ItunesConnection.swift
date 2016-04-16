@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ItunesConnection: NSObject {
 
@@ -19,10 +20,8 @@ class ItunesConnection: NSObject {
 		// Url
 		let url = NSURL(string: "https://itunes.apple.com/search?term=\(escapedString!)&media=music")
 
-        // Create task
+		// Create task
 		let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { data, response, error in
-
-			var iTunesDict: [String: AnyObject]!
 
 			guard error == nil else {
 				print("Error getting iTunes data: \(error)")
@@ -40,27 +39,21 @@ class ItunesConnection: NSObject {
 				return
 			}
 
-			do {
-				iTunesDict = try NSJSONSerialization.JSONObjectWithData(data, options: .AllowFragments) as? [String: AnyObject]
-			} catch {
-				print("Failed to serialize JSON: \(error)")
-			}
+			// Deserialize Json
+			let json = JSON(data: data)
 
 			/* GUARD: Is "results" in the call */
-			guard let resultsArray = iTunesDict["results"] as? [[String: AnyObject]] else {
+			guard let resultsArray = json["results"].array else {
 				print("nothing")
 				return
 			}
 
-			/*GUARD: First result has a value */
-			guard let firstResult = resultsArray.first! as [String: AnyObject]? else {
-				return
-			}
+			print(resultsArray)
 
-			let artist = firstResult["artistName"] as! String
-			let artworkURL = firstResult["artworkUrl100"] as! String
-			let albumtitle = firstResult["collectionName"] as! String
-			let genre = firstResult["primaryGenreName"] as! String
+			let artist = resultsArray[0]["artistName"].stringValue
+			let artworkURL = resultsArray[0]["artworkUrl100"].stringValue
+			let albumtitle = resultsArray[0]["collectionName"].stringValue
+			let genre = resultsArray[0]["primaryGenreName"].stringValue
 
 			// Load model
 			let album = Album(title: albumtitle, artist: artist, genre: genre, artworkURL: artworkURL)
