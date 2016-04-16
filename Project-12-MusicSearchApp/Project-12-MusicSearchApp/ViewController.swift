@@ -10,16 +10,37 @@ import UIKit
 
 class ViewController: UIViewController {
 
+	// MARK: - Properties
+
+	@IBOutlet weak var searchTextField: UITextField!
+	@IBOutlet weak var scrollView: UIScrollView!
+	@IBOutlet weak var pageIndicator: UIPageControl!
+
 	override func viewDidLoad() {
 		super.viewDidLoad()
-		// Do any additional setup after loading the view, typically from a nib.
-		ItunesConnection.getAlbumForString("Frozen") { album in
-			print(album.title)
-		}
+
+		pageIndicator.numberOfPages = 0
 	}
 
-	override func didReceiveMemoryWarning() {
-		super.didReceiveMemoryWarning()
-		// Dispose of any resources that can be recreated.
+	// MARK: - Actions
+
+	@IBAction func searchForMusicButton(sender: UIButton) {
+		// Hide keyboard
+		searchTextField.resignFirstResponder()
+
+		// Search music
+		ItunesConnection.getAlbumForString("Harry Potter") { album in
+
+			// Custom view
+			let musicView = NSBundle.mainBundle().loadNibNamed("MusicView", owner: self, options: nil).last as! MusicView
+
+			musicView.frame = CGRectMake(0, 0, self.scrollView.frame.size.width, self.scrollView.frame.size.height)
+			musicView.updateConstraints()
+
+			dispatch_async(dispatch_get_main_queue()) {
+				musicView.addDataToMusicView(album)
+				self.scrollView.addSubview(musicView)
+			}
+		}
 	}
 }

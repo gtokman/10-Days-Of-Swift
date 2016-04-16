@@ -15,6 +15,8 @@
 		027CE7891CC1E1E3002AFDDF /* Project_12_MusicSearchAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CE7881CC1E1E3002AFDDF /* Project_12_MusicSearchAppTests.swift */; };
 		027CE7971CC1E24F002AFDDF /* ItunesConnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CE7961CC1E24F002AFDDF /* ItunesConnection.swift */; };
 		027CE79C1CC1E5C1002AFDDF /* Album.swift in Sources */ = {isa = PBXBuildFile; fileRef = 027CE79B1CC1E5C1002AFDDF /* Album.swift */; };
+		02D78A1E1CC2863300BD7E66 /* MusicView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02D78A1D1CC2863300BD7E66 /* MusicView.xib */; };
+		02D78A241CC2867E00BD7E66 /* MusicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02D78A231CC2867E00BD7E66 /* MusicView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +42,8 @@
 		027CE78A1CC1E1E3002AFDDF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		027CE7961CC1E24F002AFDDF /* ItunesConnection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ItunesConnection.swift; sourceTree = "<group>"; };
 		027CE79B1CC1E5C1002AFDDF /* Album.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Album.swift; sourceTree = "<group>"; };
+		02D78A1D1CC2863300BD7E66 /* MusicView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MusicView.xib; sourceTree = "<group>"; };
+		02D78A231CC2867E00BD7E66 /* MusicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MusicView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,14 +85,13 @@
 		027CE7721CC1E1E2002AFDDF /* Project-12-MusicSearchApp */ = {
 			isa = PBXGroup;
 			children = (
+				02D78A1C1CC2861500BD7E66 /* View */,
 				027CE79F1CC1E5D0002AFDDF /* Model */,
 				027CE7731CC1E1E2002AFDDF /* AppDelegate.swift */,
 				027CE7751CC1E1E2002AFDDF /* ViewController.swift */,
-				027CE7771CC1E1E2002AFDDF /* Main.storyboard */,
 				027CE77A1CC1E1E2002AFDDF /* Assets.xcassets */,
 				027CE77C1CC1E1E2002AFDDF /* LaunchScreen.storyboard */,
 				027CE77F1CC1E1E2002AFDDF /* Info.plist */,
-				027CE7961CC1E24F002AFDDF /* ItunesConnection.swift */,
 			);
 			path = "Project-12-MusicSearchApp";
 			sourceTree = "<group>";
@@ -106,8 +109,19 @@
 			isa = PBXGroup;
 			children = (
 				027CE79B1CC1E5C1002AFDDF /* Album.swift */,
+				027CE7961CC1E24F002AFDDF /* ItunesConnection.swift */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		02D78A1C1CC2861500BD7E66 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02D78A1D1CC2863300BD7E66 /* MusicView.xib */,
+				027CE7771CC1E1E2002AFDDF /* Main.storyboard */,
+				02D78A231CC2867E00BD7E66 /* MusicView.swift */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -193,6 +207,7 @@
 			files = (
 				027CE77E1CC1E1E2002AFDDF /* LaunchScreen.storyboard in Resources */,
 				027CE77B1CC1E1E2002AFDDF /* Assets.xcassets in Resources */,
+				02D78A1E1CC2863300BD7E66 /* MusicView.xib in Resources */,
 				027CE7791CC1E1E2002AFDDF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -213,6 +228,7 @@
 			files = (
 				027CE7761CC1E1E2002AFDDF /* ViewController.swift in Sources */,
 				027CE7741CC1E1E2002AFDDF /* AppDelegate.swift in Sources */,
+				02D78A241CC2867E00BD7E66 /* MusicView.swift in Sources */,
 				027CE7971CC1E24F002AFDDF /* ItunesConnection.swift in Sources */,
 				027CE79C1CC1E5C1002AFDDF /* Album.swift in Sources */,
 			);
@@ -404,6 +420,7 @@
 				027CE78F1CC1E1E3002AFDDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		027CE7901CC1E1E3002AFDDF /* Build configuration list for PBXNativeTarget "Project-12-MusicSearchAppTests" */ = {
 			isa = XCConfigurationList;
@@ -412,6 +429,7 @@
 				027CE7921CC1E1E3002AFDDF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
