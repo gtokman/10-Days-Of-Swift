@@ -107,4 +107,14 @@
 * Sort data with Predicates
 * *Tools/Frameworks used: Xcode 7.3, UIKit, CloudKit*
 
+## Day - 12 - Music Search 
+
+![Music](http://g.recordit.co/c5iyFui6yj.gif)
+### I learned how to: 
+* iOS Networking
+* Create a data model
+* Create Views using xib file
+* Tools/Frameworks used: Xcode 7.3, UIKit, [SwiftyJson](https://github.com/SwiftyJSON/SwiftyJSON), [MONActivityIndicatorView](https://github.com/mownier/MONActivityIndicatorView)
+
+
 
