@@ -10,10 +10,14 @@ import UIKit
 
 class ItunesConnection: NSObject {
 
-	class func getAlbumForString(searchString: String) {
+	typealias iTunesAlbumData = Album -> Void
+
+	class func getAlbumForString(searchString: String, completionHandler: iTunesAlbumData) {
+
+		let escapedString = searchString.stringByAddingPercentEncodingWithAllowedCharacters(NSCharacterSet.URLHostAllowedCharacterSet())
 
 		// Url
-		let url = NSURL(string: "https://itunes.apple.com/search?term=frozen&media=music")
+		let url = NSURL(string: "https://itunes.apple.com/search?term=\(escapedString!)&media=music")
 
 		let task = NSURLSession.sharedSession().dataTaskWithURL(url!) { data, response, error in
 
@@ -26,10 +30,15 @@ class ItunesConnection: NSObject {
 
 			do {
 				iTunesDict = try NSJSONSerialization.JSONObjectWithData(data!, options: .AllowFragments) as! [String: AnyObject]
-				print(iTunesDict)
+				 print(iTunesDict)
 			} catch {
 				print("Failed to serialize JSON: \(error)")
 			}
+
+			// Load model
+			let album = Album(title: "Frozen", artist: "Idina Menzel", genre: "Soundtrack", artworkURL: "")
+
+			completionHandler(album)
 		}
 		task.resume()
 	}
