@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Project_14_TwitterLogin" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XDO-Z6-gcn">
+                                <rect key="frame" x="10" y="30" width="580" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="1Eg-uq-baK">
+                                <rect key="frame" x="290" y="187" width="20" height="20"/>
+                                <color key="color" red="0.2274509804" green="0.5568627451" blue="0.85882352939999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RsQ-Bb-VIJ">
+                                <rect key="frame" x="276" y="285" width="48" height="30"/>
+                                <state key="normal" title="Twitter"/>
+                                <connections>
+                                    <action selector="didTouchTwitterLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bn6-ir-qIZ"/>
+                                </connections>
+                            </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d5L-cw-0Rl">
+                                <rect key="frame" x="277" y="550" width="48" height="30"/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="didTouchLogoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pu9-bx-bLa"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="RsQ-Bb-VIJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AHo-6G-4ZG"/>
+                            <constraint firstItem="1Eg-uq-baK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FnX-rI-Zh4"/>
+                            <constraint firstAttribute="trailing" secondItem="d5L-cw-0Rl" secondAttribute="trailing" constant="275" id="M8j-lD-cJk"/>
+                            <constraint firstItem="RsQ-Bb-VIJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZLN-RS-LyH"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d5L-cw-0Rl" secondAttribute="bottom" constant="20" id="d6p-Pr-G30"/>
+                            <constraint firstItem="XDO-Z6-gcn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="eje-xL-mId"/>
+                            <constraint firstItem="1Eg-uq-baK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-103" id="n1L-uf-7Lr"/>
+                            <constraint firstItem="d5L-cw-0Rl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="277" id="tgw-jV-Nda"/>
+                            <constraint firstItem="XDO-Z6-gcn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="wCH-PU-lGU"/>
+                            <constraint firstAttribute="trailing" secondItem="XDO-Z6-gcn" secondAttribute="trailing" constant="10" id="z52-cZ-LPD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="activityIndicator" destination="1Eg-uq-baK" id="i5X-AS-uzU"/>
+                        <outlet property="logoutButton" destination="d5L-cw-0Rl" id="8LG-bO-kbo"/>
+                        <outlet property="twitterLoginButton" destination="RsQ-Bb-VIJ" id="n9R-qd-pl9"/>
+                        <outlet property="usernameLable" destination="XDO-Z6-gcn" id="X0a-Fn-wUt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
