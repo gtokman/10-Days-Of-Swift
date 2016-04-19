@@ -7,5 +7,7 @@ target 'Project-14-TwitterLogin' do
 
 pod 'Firebase', '>= 2.5.1'
 
+pod 'XLActionController'
+
 end
 

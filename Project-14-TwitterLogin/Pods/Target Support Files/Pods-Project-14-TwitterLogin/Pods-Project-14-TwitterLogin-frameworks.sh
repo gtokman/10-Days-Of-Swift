@@ -85,7 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Project-14-TwitterLogin/Firebase.framework"
+  install_framework "Pods-Project-14-TwitterLogin/XLActionController.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Project-14-TwitterLogin/Firebase.framework"
+  install_framework "Pods-Project-14-TwitterLogin/XLActionController.framework"
 fi

@@ -14,15 +14,25 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>XLActionController.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>42C2427C852DFF303D4FEDAD31A82CC3</key>
+		<key>0D22753CFF85688DBCF3F3C8AF232A75</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
 		<key>B7AC9326D819482593FE118E915409D7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CA61598831C4096095724EC8F9E93401</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -3,6 +3,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -41,23 +42,30 @@
                                     <action selector="didTouchLogoutButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="pu9-bx-bLa"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dxS-hh-1ju">
+                                <rect key="frame" x="180" y="367" width="240" height="128"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="RsQ-Bb-VIJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="AHo-6G-4ZG"/>
-                            <constraint firstItem="1Eg-uq-baK" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FnX-rI-Zh4"/>
-                            <constraint firstAttribute="trailing" secondItem="d5L-cw-0Rl" secondAttribute="trailing" constant="275" id="M8j-lD-cJk"/>
-                            <constraint firstItem="RsQ-Bb-VIJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZLN-RS-LyH"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d5L-cw-0Rl" secondAttribute="bottom" constant="20" id="d6p-Pr-G30"/>
-                            <constraint firstItem="XDO-Z6-gcn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="eje-xL-mId"/>
-                            <constraint firstItem="1Eg-uq-baK" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-103" id="n1L-uf-7Lr"/>
-                            <constraint firstItem="d5L-cw-0Rl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="277" id="tgw-jV-Nda"/>
-                            <constraint firstItem="XDO-Z6-gcn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="10" id="wCH-PU-lGU"/>
-                            <constraint firstAttribute="trailing" secondItem="XDO-Z6-gcn" secondAttribute="trailing" constant="10" id="z52-cZ-LPD"/>
+                            <constraint firstItem="dxS-hh-1ju" firstAttribute="top" secondItem="RsQ-Bb-VIJ" secondAttribute="bottom" constant="52" id="2FL-fc-gRl"/>
+                            <constraint firstItem="XDO-Z6-gcn" firstAttribute="centerX" secondItem="1Eg-uq-baK" secondAttribute="centerX" id="31s-hk-PvK"/>
+                            <constraint firstItem="d5L-cw-0Rl" firstAttribute="top" secondItem="dxS-hh-1ju" secondAttribute="bottom" constant="55" id="5xe-nS-F1F"/>
+                            <constraint firstItem="XDO-Z6-gcn" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="BRr-0Q-6KO"/>
+                            <constraint firstAttribute="bottom" secondItem="d5L-cw-0Rl" secondAttribute="bottom" constant="20" symbolic="YES" id="GZg-sD-UrT"/>
+                            <constraint firstItem="XDO-Z6-gcn" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="10" id="Gka-Oe-AQV"/>
+                            <constraint firstItem="RsQ-Bb-VIJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="RP6-He-BQ6"/>
+                            <constraint firstItem="dxS-hh-1ju" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="160" id="W6G-3P-Mud"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dxS-hh-1ju" secondAttribute="trailing" constant="160" id="cjp-2d-QCK"/>
+                            <constraint firstItem="1Eg-uq-baK" firstAttribute="centerX" secondItem="RsQ-Bb-VIJ" secondAttribute="centerX" id="hVR-zD-Oah"/>
+                            <constraint firstItem="XDO-Z6-gcn" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-10" id="jb7-Dw-nRN"/>
+                            <constraint firstItem="d5L-cw-0Rl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="277" id="ycL-b2-gAe"/>
+                            <constraint firstItem="RsQ-Bb-VIJ" firstAttribute="top" secondItem="1Eg-uq-baK" secondAttribute="bottom" constant="78" id="z2G-Bl-dQh"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="activityIndicator" destination="1Eg-uq-baK" id="i5X-AS-uzU"/>
+                        <outlet property="imageView" destination="dxS-hh-1ju" id="wBX-p7-M1d"/>
                         <outlet property="logoutButton" destination="d5L-cw-0Rl" id="8LG-bO-kbo"/>
                         <outlet property="twitterLoginButton" destination="RsQ-Bb-VIJ" id="n9R-qd-pl9"/>
                         <outlet property="usernameLable" destination="XDO-Z6-gcn" id="X0a-Fn-wUt"/>

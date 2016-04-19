@@ -1,10 +1,15 @@
 PODS:
   - Firebase (2.5.1)
+  - XLActionController (2.0.0):
+    - XLActionController/Core (= 2.0.0)
+  - XLActionController/Core (2.0.0)
 
 DEPENDENCIES:
   - Firebase (>= 2.5.1)
+  - XLActionController
 
 SPEC CHECKSUMS:
   Firebase: 3565ea88b830f28f2c77ecc524622bc71a20d085
+  XLActionController: 97ed31237413db4d9401c6a559270f4d2b4de136
 
 COCOAPODS: 0.39.0
