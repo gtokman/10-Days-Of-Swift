@@ -1,4 +1,4 @@
-# 30 Days Of Swift
+# 10 Days Of Swift - All tutorials are in Swift 2.
 
 *Challenging myself to learn new frameworks, API's, and libraries in Swift.*
 
@@ -23,7 +23,6 @@
 
 ## Day - 3 - Photo Share
 
-![SnapHat](http://g.recordit.co/xb7mNqacj0.gif)
 ### I learned how to: 
 * Enable image picker and camera
 * Add objects to photos
